@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CarrotShareApp: App {
+    @StateObject var carrotShareVM = CarrotShareViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChoresView()
+                .environmentObject(carrotShareVM)
         }
     }
 }

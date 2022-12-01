@@ -8,17 +8,91 @@
 
 /* Begin PBXBuildFile section */
 		962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2B93293761D100524427 /* CarrotShareApp.swift */; };
-		962F2B96293761D100524427 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2B95293761D100524427 /* ContentView.swift */; };
 		962F2B98293761D300524427 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962F2B97293761D300524427 /* Assets.xcassets */; };
 		962F2B9B293761D300524427 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 962F2B9A293761D300524427 /* Preview Assets.xcassets */; };
+		962F2BA22937630600524427 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 962F2BA12937630500524427 /* Launch Screen.storyboard */; };
+		962F2BA7293768B300524427 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BA6293768B300524427 /* LoginView.swift */; };
+		962F2BA9293768D100524427 /* CarrotShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BA8293768D100524427 /* CarrotShareViewModel.swift */; };
+		962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BAB2937691D00524427 /* BundleExtension.swift */; };
+		962F2BAE29376A5300524427 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BAD29376A5300524427 /* ColorExtension.swift */; };
+		962F2BB029376B0E00524427 /* LoginTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BAF29376B0E00524427 /* LoginTitleView.swift */; };
+		962F2BB229376B4700524427 /* LoginImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BB129376B4700524427 /* LoginImageView.swift */; };
+		962F2BB629376BBC00524427 /* AppButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BB529376BBC00524427 /* AppButtonView.swift */; };
+		962F2BB82937705900524427 /* GoToSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BB72937705900524427 /* GoToSignInView.swift */; };
+		962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BB92937706300524427 /* GoToSignUpView.swift */; };
+		962F2BBC2937710F00524427 /* TransparentAppButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BBB2937710E00524427 /* TransparentAppButtonView.swift */; };
+		962F2BBE2937738100524427 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BBD2937738100524427 /* SignUpView.swift */; };
+		962F2BC02937738800524427 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BBF2937738800524427 /* SignInView.swift */; };
+		962F2BC52937848300524427 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BC42937848300524427 /* ViewExtension.swift */; };
+		962F2BC72937862500524427 /* TextfieldPlaceholderStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BC62937862500524427 /* TextfieldPlaceholderStyle.swift */; };
+		962F2BCB293788ED00524427 /* SignUpFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BCA293788ED00524427 /* SignUpFieldsView.swift */; };
+		962F2BCD29378A8500524427 /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BCC29378A8500524427 /* SignInButtonView.swift */; };
+		962F2BCF29378A9500524427 /* SignUpButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BCE29378A9500524427 /* SignUpButtonView.swift */; };
+		962F2BD329378C6A00524427 /* SignInFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BD229378C6A00524427 /* SignInFieldsView.swift */; };
+		962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BD429378D0700524427 /* SignInWithAppleButtonView.swift */; };
+		962F2BD8293790BE00524427 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 962F2BD7293790BE00524427 /* GoogleSignIn */; };
+		962F2BDA293790BE00524427 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 962F2BD9293790BE00524427 /* GoogleSignInSwift */; };
+		962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BDC2937957400524427 /* FlatmatesView.swift */; };
+		962F2BDF2937971D00524427 /* FlatmatesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BDE2937971D00524427 /* FlatmatesListView.swift */; };
+		962F2BE12937997E00524427 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BE02937997E00524427 /* TabBarView.swift */; };
+		962F2BE6293799D300524427 /* LetsPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BE5293799D300524427 /* LetsPlayView.swift */; };
+		962F2BE8293799DC00524427 /* CarrotTradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BE7293799DC00524427 /* CarrotTradeView.swift */; };
+		962F2BEA293799E800524427 /* ChoresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BE9293799E800524427 /* ChoresView.swift */; };
+		962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BEC29379BB400524427 /* OnBoardingView.swift */; };
+		962F2BEF2937A9FD00524427 /* Chores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BEE2937A9FD00524427 /* Chores.swift */; };
+		962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BF42937DCF700524427 /* CustomMultiDatePickerView.swift */; };
+		962F2BF72937EDFD00524427 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BF62937EDFD00524427 /* DateExtension.swift */; };
+		962F2BF92937EFFB00524427 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BF82937EFFB00524427 /* User.swift */; };
+		962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BFA29389AD400524427 /* ChoresCollectionView.swift */; };
+		962F2BFD29389BF100524427 /* DaysListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BFC29389BF100524427 /* DaysListView.swift */; };
+		962F2BFF29389C1300524427 /* DateNumberElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BFE29389C1300524427 /* DateNumberElementView.swift */; };
+		962F2C0129389C4300524427 /* MultiDatePickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */; };
+		965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E429389D8500D6ADE8 /* SettingsView.swift */; };
+		965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E629389E6300D6ADE8 /* SettingsButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		962F2B90293761D100524427 /* CarrotShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarrotShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		962F2B93293761D100524427 /* CarrotShareApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotShareApp.swift; sourceTree = "<group>"; };
-		962F2B95293761D100524427 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		962F2B97293761D300524427 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		962F2B9A293761D300524427 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		962F2BA12937630500524427 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		962F2BA6293768B300524427 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		962F2BA8293768D100524427 /* CarrotShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotShareViewModel.swift; sourceTree = "<group>"; };
+		962F2BAB2937691D00524427 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		962F2BAD29376A5300524427 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		962F2BAF29376B0E00524427 /* LoginTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTitleView.swift; sourceTree = "<group>"; };
+		962F2BB129376B4700524427 /* LoginImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginImageView.swift; sourceTree = "<group>"; };
+		962F2BB529376BBC00524427 /* AppButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButtonView.swift; sourceTree = "<group>"; };
+		962F2BB72937705900524427 /* GoToSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToSignInView.swift; sourceTree = "<group>"; };
+		962F2BB92937706300524427 /* GoToSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToSignUpView.swift; sourceTree = "<group>"; };
+		962F2BBB2937710E00524427 /* TransparentAppButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentAppButtonView.swift; sourceTree = "<group>"; };
+		962F2BBD2937738100524427 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		962F2BBF2937738800524427 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		962F2BC42937848300524427 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		962F2BC62937862500524427 /* TextfieldPlaceholderStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldPlaceholderStyle.swift; sourceTree = "<group>"; };
+		962F2BCA293788ED00524427 /* SignUpFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFieldsView.swift; sourceTree = "<group>"; };
+		962F2BCC29378A8500524427 /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
+		962F2BCE29378A9500524427 /* SignUpButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButtonView.swift; sourceTree = "<group>"; };
+		962F2BD229378C6A00524427 /* SignInFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFieldsView.swift; sourceTree = "<group>"; };
+		962F2BD429378D0700524427 /* SignInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonView.swift; sourceTree = "<group>"; };
+		962F2BDC2937957400524427 /* FlatmatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesView.swift; sourceTree = "<group>"; };
+		962F2BDE2937971D00524427 /* FlatmatesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesListView.swift; sourceTree = "<group>"; };
+		962F2BE02937997E00524427 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		962F2BE5293799D300524427 /* LetsPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsPlayView.swift; sourceTree = "<group>"; };
+		962F2BE7293799DC00524427 /* CarrotTradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeView.swift; sourceTree = "<group>"; };
+		962F2BE9293799E800524427 /* ChoresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresView.swift; sourceTree = "<group>"; };
+		962F2BEC29379BB400524427 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		962F2BEE2937A9FD00524427 /* Chores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chores.swift; sourceTree = "<group>"; };
+		962F2BF42937DCF700524427 /* CustomMultiDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMultiDatePickerView.swift; sourceTree = "<group>"; };
+		962F2BF62937EDFD00524427 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		962F2BF82937EFFB00524427 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		962F2BFA29389AD400524427 /* ChoresCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoresCollectionView.swift; sourceTree = "<group>"; };
+		962F2BFC29389BF100524427 /* DaysListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysListView.swift; sourceTree = "<group>"; };
+		962F2BFE29389C1300524427 /* DateNumberElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateNumberElementView.swift; sourceTree = "<group>"; };
+		962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerGridView.swift; sourceTree = "<group>"; };
+		965468E429389D8500D6ADE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		965468E629389E6300D6ADE8 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962F2BD8293790BE00524427 /* GoogleSignIn in Frameworks */,
+				962F2BDA293790BE00524427 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +128,12 @@
 			isa = PBXGroup;
 			children = (
 				962F2B93293761D100524427 /* CarrotShareApp.swift */,
-				962F2B95293761D100524427 /* ContentView.swift */,
+				962F2BC12937841200524427 /* Modifier */,
+				962F2BAA2937691200524427 /* Extensions */,
+				962F2BA52937689200524427 /* Views */,
+				962F2BA42937688C00524427 /* View Models */,
+				962F2BA32937688300524427 /* Models */,
+				962F2BA12937630500524427 /* Launch Screen.storyboard */,
 				962F2B97293761D300524427 /* Assets.xcassets */,
 				962F2B99293761D300524427 /* Preview Content */,
 			);
@@ -65,6 +146,157 @@
 				962F2B9A293761D300524427 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		962F2BA32937688300524427 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BEE2937A9FD00524427 /* Chores.swift */,
+				962F2BF82937EFFB00524427 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		962F2BA42937688C00524427 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BA8293768D100524427 /* CarrotShareViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		962F2BA52937689200524427 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BEB29379B9C00524427 /* Mains */,
+				962F2BE4293799C200524427 /* Lets Play */,
+				962F2BE3293799B300524427 /* Carrot Trade */,
+				962F2BE22937998A00524427 /* Chores */,
+				962F2BDB2937955A00524427 /* Flatmates */,
+				962F2BB429376BAF00524427 /* Commons */,
+				962F2BB329376BA800524427 /* Login */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		962F2BAA2937691200524427 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BAB2937691D00524427 /* BundleExtension.swift */,
+				962F2BAD29376A5300524427 /* ColorExtension.swift */,
+				962F2BC42937848300524427 /* ViewExtension.swift */,
+				962F2BF62937EDFD00524427 /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		962F2BB329376BA800524427 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BA6293768B300524427 /* LoginView.swift */,
+				962F2BAF29376B0E00524427 /* LoginTitleView.swift */,
+				962F2BB129376B4700524427 /* LoginImageView.swift */,
+				962F2BD129378AA400524427 /* Sign Up */,
+				962F2BD029378A9E00524427 /* Sign In */,
+				965468E429389D8500D6ADE8 /* SettingsView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		962F2BB429376BAF00524427 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BB529376BBC00524427 /* AppButtonView.swift */,
+				962F2BBB2937710E00524427 /* TransparentAppButtonView.swift */,
+				965468E629389E6300D6ADE8 /* SettingsButtonView.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		962F2BC12937841200524427 /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BC62937862500524427 /* TextfieldPlaceholderStyle.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		962F2BD029378A9E00524427 /* Sign In */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BBF2937738800524427 /* SignInView.swift */,
+				962F2BB92937706300524427 /* GoToSignUpView.swift */,
+				962F2BB72937705900524427 /* GoToSignInView.swift */,
+				962F2BCC29378A8500524427 /* SignInButtonView.swift */,
+				962F2BD229378C6A00524427 /* SignInFieldsView.swift */,
+				962F2BD429378D0700524427 /* SignInWithAppleButtonView.swift */,
+			);
+			path = "Sign In";
+			sourceTree = "<group>";
+		};
+		962F2BD129378AA400524427 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BBD2937738100524427 /* SignUpView.swift */,
+				962F2BCE29378A9500524427 /* SignUpButtonView.swift */,
+				962F2BCA293788ED00524427 /* SignUpFieldsView.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		962F2BDB2937955A00524427 /* Flatmates */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BDC2937957400524427 /* FlatmatesView.swift */,
+				962F2BDE2937971D00524427 /* FlatmatesListView.swift */,
+			);
+			path = Flatmates;
+			sourceTree = "<group>";
+		};
+		962F2BE22937998A00524427 /* Chores */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BE9293799E800524427 /* ChoresView.swift */,
+				962F2C0229389C5900524427 /* DatePicker */,
+				962F2BFA29389AD400524427 /* ChoresCollectionView.swift */,
+			);
+			path = Chores;
+			sourceTree = "<group>";
+		};
+		962F2BE3293799B300524427 /* Carrot Trade */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BE7293799DC00524427 /* CarrotTradeView.swift */,
+			);
+			path = "Carrot Trade";
+			sourceTree = "<group>";
+		};
+		962F2BE4293799C200524427 /* Lets Play */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BE5293799D300524427 /* LetsPlayView.swift */,
+			);
+			path = "Lets Play";
+			sourceTree = "<group>";
+		};
+		962F2BEB29379B9C00524427 /* Mains */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BE02937997E00524427 /* TabBarView.swift */,
+				962F2BEC29379BB400524427 /* OnBoardingView.swift */,
+			);
+			path = Mains;
+			sourceTree = "<group>";
+		};
+		962F2C0229389C5900524427 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				962F2BFC29389BF100524427 /* DaysListView.swift */,
+				962F2BFE29389C1300524427 /* DateNumberElementView.swift */,
+				962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */,
+				962F2BF42937DCF700524427 /* CustomMultiDatePickerView.swift */,
+			);
+			path = DatePicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +315,10 @@
 			dependencies = (
 			);
 			name = CarrotShare;
+			packageProductDependencies = (
+				962F2BD7293790BE00524427 /* GoogleSignIn */,
+				962F2BD9293790BE00524427 /* GoogleSignInSwift */,
+			);
 			productName = CarrotShare;
 			productReference = 962F2B90293761D100524427 /* CarrotShare.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +347,9 @@
 				Base,
 			);
 			mainGroup = 962F2B87293761D100524427;
+			packageReferences = (
+				962F2BD6293790BE00524427 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 962F2B91293761D100524427 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				962F2BA22937630600524427 /* Launch Screen.storyboard in Resources */,
 				962F2B9B293761D300524427 /* Preview Assets.xcassets in Resources */,
 				962F2B98293761D300524427 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +377,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				962F2B96293761D100524427 /* ContentView.swift in Sources */,
+				962F2C0129389C4300524427 /* MultiDatePickerGridView.swift in Sources */,
+				962F2BB029376B0E00524427 /* LoginTitleView.swift in Sources */,
+				962F2BCD29378A8500524427 /* SignInButtonView.swift in Sources */,
+				962F2BA9293768D100524427 /* CarrotShareViewModel.swift in Sources */,
+				965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */,
+				962F2BF92937EFFB00524427 /* User.swift in Sources */,
+				962F2BF72937EDFD00524427 /* DateExtension.swift in Sources */,
+				962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */,
+				962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */,
+				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
 				962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */,
+				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
+				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
+				962F2BFF29389C1300524427 /* DateNumberElementView.swift in Sources */,
+				962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */,
+				962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */,
+				962F2BB229376B4700524427 /* LoginImageView.swift in Sources */,
+				962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */,
+				962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */,
+				962F2BFD29389BF100524427 /* DaysListView.swift in Sources */,
+				962F2BBC2937710F00524427 /* TransparentAppButtonView.swift in Sources */,
+				962F2BD329378C6A00524427 /* SignInFieldsView.swift in Sources */,
+				965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */,
+				962F2BCB293788ED00524427 /* SignUpFieldsView.swift in Sources */,
+				962F2BEA293799E800524427 /* ChoresView.swift in Sources */,
+				962F2BE8293799DC00524427 /* CarrotTradeView.swift in Sources */,
+				962F2BDF2937971D00524427 /* FlatmatesListView.swift in Sources */,
+				962F2BC52937848300524427 /* ViewExtension.swift in Sources */,
+				962F2BB82937705900524427 /* GoToSignInView.swift in Sources */,
+				962F2BB629376BBC00524427 /* AppButtonView.swift in Sources */,
+				962F2BCF29378A9500524427 /* SignUpButtonView.swift in Sources */,
+				962F2BE12937997E00524427 /* TabBarView.swift in Sources */,
+				962F2BC72937862500524427 /* TextfieldPlaceholderStyle.swift in Sources */,
+				962F2BAE29376A5300524427 /* ColorExtension.swift in Sources */,
+				962F2BE6293799D300524427 /* LetsPlayView.swift in Sources */,
+				962F2BC02937738800524427 /* SignInView.swift in Sources */,
+				962F2BEF2937A9FD00524427 /* Chores.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +545,11 @@
 				DEVELOPMENT_TEAM = Q6DV6C6352;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Carrot Share";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,9 +576,11 @@
 				DEVELOPMENT_TEAM = Q6DV6C6352;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Carrot Share";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -339,6 +618,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		962F2BD6293790BE00524427 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		962F2BD7293790BE00524427 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 962F2BD6293790BE00524427 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		962F2BD9293790BE00524427 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 962F2BD6293790BE00524427 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 962F2B88293761D100524427 /* Project object */;
 }
