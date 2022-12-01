@@ -13,9 +13,9 @@ struct OnBoardingView: View {
         NavigationView {
             switch true {
             case carrotShareVM.isApplyingSettings:
-                TabBarView()
-            case carrotShareVM.isApplyingSettings:
                 SettingsView()
+            case carrotShareVM.isLoggedIn:
+                TabBarView()
             default:
                 LoginView()
             }

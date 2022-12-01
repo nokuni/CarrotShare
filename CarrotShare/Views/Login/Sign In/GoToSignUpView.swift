@@ -10,7 +10,7 @@ import SwiftUI
 struct GoToSignUpView: View {
     var body: some View {
         NavigationLink(destination: SignUpView()) {
-            TransparentAppButtonView(text: "Sign Up")
+            TransparentAppButtonView(text: "Sign Up", size: CGSize(width: UIScreen.main.bounds.width * 0.5, height: UIScreen.main.bounds.height * 0.07))
         }
         .padding()
     }

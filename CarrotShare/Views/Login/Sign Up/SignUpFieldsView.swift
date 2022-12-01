@@ -15,7 +15,7 @@ struct SignUpFieldsView: View {
         case repeatPassword = "Repeat Password"
     }
     @FocusState var signUpField: SignUpField?
-    @State var fields = [String](repeating: "", count: SignUpField.allCases.count)
+    @Binding var fields: [String]
     var body: some View {
         VStack(spacing: 0) {
             ForEach(SignUpField.allCases.indices, id: \.self) { index in
@@ -51,6 +51,6 @@ struct SignUpFieldsView: View {
 
 struct SignUpFieldsView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpFieldsView()
+        SignUpFieldsView(fields: .constant([]))
     }
 }

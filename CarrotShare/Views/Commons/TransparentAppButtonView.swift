@@ -9,11 +9,12 @@ import SwiftUI
 
 struct TransparentAppButtonView: View {
     var text: String
+    var size: CGSize
     var body: some View {
         Capsule()
             .stroke(lineWidth: 3)
             .fill(LinearGradient(colors: [.appGreen, .appOrange], startPoint: .leading, endPoint: .trailing))
-            .frame(width: UIScreen.main.bounds.width * 0.5, height: UIScreen.main.bounds.height * 0.07)
+            .frame(width: size.width, height: size.height)
             .overlay(
                 LinearGradient(
                     colors: [.appGreen, .appOrange],
@@ -31,6 +32,6 @@ struct TransparentAppButtonView: View {
 
 struct TransparentAppButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        TransparentAppButtonView(text: "Sign Up")
+        TransparentAppButtonView(text: "Sign Up", size: CGSize.zero)
     }
 }

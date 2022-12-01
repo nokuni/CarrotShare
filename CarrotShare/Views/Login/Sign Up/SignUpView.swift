@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SignUpView: View {
+    @State var fields = [String](repeating: "", count: 4)
+    @State private var isShowingAlert: Bool = false
     var body: some View {
         VStack {
-            SignUpFieldsView()
-            SignUpButtonView()
+            SignUpFieldsView(fields: $fields)
+            SignUpButtonView(fields: $fields, isShowingAlert: $isShowingAlert)
             Spacer()
         }
         .navigationTitle("Sign Up")

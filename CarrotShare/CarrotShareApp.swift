@@ -12,7 +12,7 @@ struct CarrotShareApp: App {
     @StateObject var carrotShareVM = CarrotShareViewModel()
     var body: some Scene {
         WindowGroup {
-            ChoresView()
+            OnBoardingView()
                 .environmentObject(carrotShareVM)
         }
     }

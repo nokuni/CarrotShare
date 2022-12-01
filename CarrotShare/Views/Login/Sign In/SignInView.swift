@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct SignInView: View {
+    @State var fields = [String](repeating: "", count: 3)
+    @State private var isShowingAlert: Bool = false
     var body: some View {
         VStack {
-            SignInFieldsView()
-            SignInButtonView()
+            SignInFieldsView(fields: $fields)
+            SignInButtonView(fields: $fields, isShowingAlert: $isShowingAlert)
             Spacer()
             SignInWithAppleButtonView()
             Spacer()

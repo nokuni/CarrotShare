@@ -8,8 +8,8 @@
 import SwiftUI
 
 class CarrotShareViewModel: ObservableObject {
-    @AppStorage("logged") var isLoggedIn: Bool = false
-    @AppStorage("settings") var isApplyingSettings: Bool = false
+    @Published var isLoggedIn: Bool = false
+    @Published var isApplyingSettings: Bool = false
     @Published var chores: [Chore] = Chore.all
     
     func getChore(from index: Int) -> Chore? {
