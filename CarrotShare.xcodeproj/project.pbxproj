@@ -49,6 +49,10 @@
 		962F2C0129389C4300524427 /* MultiDatePickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */; };
 		965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E429389D8500D6ADE8 /* SettingsView.swift */; };
 		965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E629389E6300D6ADE8 /* SettingsButtonView.swift */; };
+		AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA22938A48900F38D2A /* FlatmateView.swift */; };
+		AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */; };
+		AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */; };
+		AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA82938A55A00F38D2A /* Flatmate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +97,10 @@
 		962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerGridView.swift; sourceTree = "<group>"; };
 		965468E429389D8500D6ADE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		965468E629389E6300D6ADE8 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
+		AC3FDCA22938A48900F38D2A /* FlatmateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateView.swift; sourceTree = "<group>"; };
+		AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateListView.swift; sourceTree = "<group>"; };
+		AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateDetailView.swift; sourceTree = "<group>"; };
+		AC3FDCA82938A55A00F38D2A /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +161,7 @@
 			children = (
 				962F2BEE2937A9FD00524427 /* Chores.swift */,
 				962F2BF82937EFFB00524427 /* User.swift */,
+				AC3FDCA82938A55A00F38D2A /* Flatmate.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +256,7 @@
 		962F2BDB2937955A00524427 /* Flatmates */ = {
 			isa = PBXGroup;
 			children = (
+				AC3FDCA12938A3D500F38D2A /* Components */,
 				962F2BDC2937957400524427 /* FlatmatesView.swift */,
 				962F2BDE2937971D00524427 /* FlatmatesListView.swift */,
 			);
@@ -297,6 +307,16 @@
 				962F2BF42937DCF700524427 /* CustomMultiDatePickerView.swift */,
 			);
 			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		AC3FDCA12938A3D500F38D2A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AC3FDCA22938A48900F38D2A /* FlatmateView.swift */,
+				AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */,
+				AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +404,8 @@
 				965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */,
 				962F2BF92937EFFB00524427 /* User.swift in Sources */,
 				962F2BF72937EDFD00524427 /* DateExtension.swift in Sources */,
+				AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */,
+				AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */,
 				962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */,
 				962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */,
 				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
@@ -391,6 +413,7 @@
 				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
 				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
 				962F2BFF29389C1300524427 /* DateNumberElementView.swift in Sources */,
+				AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */,
 				962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */,
 				962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */,
 				962F2BB229376B4700524427 /* LoginImageView.swift in Sources */,
@@ -409,6 +432,7 @@
 				962F2BB629376BBC00524427 /* AppButtonView.swift in Sources */,
 				962F2BCF29378A9500524427 /* SignUpButtonView.swift in Sources */,
 				962F2BE12937997E00524427 /* TabBarView.swift in Sources */,
+				AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */,
 				962F2BC72937862500524427 /* TextfieldPlaceholderStyle.swift in Sources */,
 				962F2BAE29376A5300524427 /* ColorExtension.swift in Sources */,
 				962F2BE6293799D300524427 /* LetsPlayView.swift in Sources */,
