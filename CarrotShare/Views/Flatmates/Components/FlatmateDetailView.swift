@@ -9,22 +9,29 @@ import SwiftUI
 
 struct FlatmateDetailView: View {
     @State var flatmate: Flatmate
-    @State private var checked = false
+    @State private var showingAlert = false
     
     var body: some View {
         VStack {
             FlatmateHeaderView(flatmate: flatmate)
             Divider()
+            
             VStack(alignment: .leading) {
                 Text("Anything to do today?")
                     .font(.title)
                     .fontWeight(.semibold)
                     .padding(40)
-                Toggle(isOn: $checked) {
+                HStack {
                     Text("Hover and mop the bathroom")
                         .font(.title3)
+                    Spacer()
+                    Button("Done?") {
+                        showingAlert = true
+                    }
+                    .alert("Confirm it's done", isPresented: $showingAlert) {
+                        Button("OK", role: .destructive) { }
+                    }
                 }
-                .tint(Color("AppGreen"))
             }
             .padding()
             Spacer()
