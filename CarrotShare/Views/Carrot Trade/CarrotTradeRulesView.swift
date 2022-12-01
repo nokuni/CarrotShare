@@ -38,7 +38,7 @@ struct RulesView: View {
                         .font(.title2)
                         .padding(.bottom, 4)
                     VStack(alignment: .leading) {
-                        Text("You win a 🏆 after getting 10 🥕 in one chore")
+                        Text("You can choose the menu for 10 🥕")
                             .padding(.bottom, 4)
                         Text("You can choose the movie for 10 🥕")
                             .padding(.bottom, 4)
