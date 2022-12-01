@@ -23,11 +23,9 @@ struct RulesView: View {
                         .font(.title2)
                         .padding(.bottom, 4)
                     VStack(alignment: .leading) {
-                        Text("You earn 🥕 for every chore you complete")
+                        Text("You earn 2 🥕 for every chore you complete")
                             .padding(.bottom, 4)
-                        Text("You can complete a flatmate's chore and earn 🥕🥕 instead of 🥕")
-                            .padding(.bottom, 4)
-                        Text("If you skip your chore, you lose 🥕🥕")
+                        Text("If you skip your chore, you lose 2 🥕")
                     }
                     .font(.body)
                     .foregroundColor(.gray)
