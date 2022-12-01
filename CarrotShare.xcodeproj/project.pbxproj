@@ -51,6 +51,7 @@
 		AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */; };
 		AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */; };
 		AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA82938A55A00F38D2A /* Flatmate.swift */; };
+		ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +100,7 @@
 		AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateListView.swift; sourceTree = "<group>"; };
 		AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateDetailView.swift; sourceTree = "<group>"; };
 		AC3FDCA82938A55A00F38D2A /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
+		ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeRulesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				962F2BE7293799DC00524427 /* CarrotTradeView.swift */,
+				ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */,
 			);
 			path = "Carrot Trade";
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
 				962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */,
 				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
+				ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */,
 				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
 				962F2BFF29389C1300524427 /* DateNumberElementView.swift in Sources */,
 				AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */,
