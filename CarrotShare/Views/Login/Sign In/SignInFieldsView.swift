@@ -7,46 +7,58 @@
 
 import SwiftUI
 
+enum SignInField: String, CaseIterable {
+    case username = "Username"
+    case password = "Password"
+}
+
 struct SignInFieldsView: View {
-    enum SignInField: String, CaseIterable {
-        case username = "Username"
-        case email = "Email"
-        case password = "Password"
-    }
     @FocusState var signInField: SignInField?
-    @Binding var fields: [String]
+    @Binding var username: String
+    @Binding var password: String
     var body: some View {
         VStack(spacing: 0) {
-            ForEach(SignInField.allCases.indices, id: \.self) { index in
-                TextField("", text: $fields[index])
-                    .placeholderStyle(isPlaceholderShowing: fields[index].isEmpty) {
-                        Text(SignInField.allCases[index].rawValue)
-                            .foregroundColor(.gray)
-                    }
-                    .padding()
-                    .background(
-                        Color(UIColor.systemGray6).cornerRadius(30)
-                    )
-                    .padding(.horizontal)
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.1)
-                    .focused($signInField, equals: SignInField.allCases[index])
-                    .onSubmit {
-                        switch SignInField.allCases[index] {
-                        case .username:
-                            signInField = .email
-                        case .email:
-                            signInField = .password
-                        case .password:
-                            signInField = nil
-                        }
-                    }
+            SignInFieldView(signInField: $signInField, selectedField: .username, field: $username)
+            SignInFieldView(signInField: $signInField, selectedField: .password, field: $password)
+        }
+        .onSubmit {
+            switch signInField {
+            case .username:
+                signInField = .password
+            case .password:
+                signInField = nil
+            case .none:
+                print("error")
             }
         }
+        
     }
 }
 
 struct SignInFieldsView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInFieldsView(fields: .constant([]))
+        SignInFieldsView(username: .constant(""), password: .constant(""))
+    }
+}
+
+struct SignInFieldView: View {
+    var signInField: FocusState<SignInField?>.Binding
+    var selectedField: SignInField?
+    @Binding var field: String
+    var body: some View {
+        TextField("", text: $field)
+            .placeholderStyle(isPlaceholderShowing: field.isEmpty) {
+                Text(selectedField?.rawValue ?? "")
+                    .foregroundColor(.gray)
+            }
+            .textInputAutocapitalization(.never)
+            .autocorrectionDisabled(true)
+            .padding()
+            .background(
+                Color(UIColor.systemGray6).cornerRadius(30)
+            )
+            .padding(.horizontal)
+            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.1)
+            .focused(signInField, equals: selectedField)
     }
 }

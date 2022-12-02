@@ -13,11 +13,12 @@ class CarrotShareViewModel: ObservableObject {
     @Published var isApplyingSettings: Bool = false
     @Published var user: User?
     @Published var chores: [Chore] = []
-    @Published var fields = [String](repeating: "", count: 4)
+    @Published var signInResponse: SignInResponse?
     
     let choreUrl = "http://localhost:8080/chores/index"
     let flatshareUrl = "http://localhost:8080/flatshares/index"
-    let authUrl = "http://localhost:8080/api/signup"
+    let signUpUrl = "http://localhost:8080/api/signup"
+    let signInUrl = "http://localhost:8080/api/signup"
     
     func getChore(from index: Int) -> Chore? {
         if let choreIndex = chores.firstIndex(where: {_ in
@@ -45,7 +46,7 @@ class CarrotShareViewModel: ObservableObject {
     
     func signIn(userName: String, password: String) async throws -> SignInResponse {
         let apiManager = APIManager()
-        let connexion = try await apiManager.postRequest(url: authUrl, cachePolicy: .useProtocolCachePolicy, model: SignInResponse.self, body: [
+        let connexion = try await apiManager.postRequest(url: signInUrl, cachePolicy: .useProtocolCachePolicy, model: SignInResponse.self, body: [
             "username": userName,
             "password": password,
         ])
@@ -54,7 +55,7 @@ class CarrotShareViewModel: ObservableObject {
     
     func signUp(userName: String, email: String, password: String) async throws -> User {
         let apiManager = APIManager()
-        let send = try await apiManager.postRequest(url: authUrl, cachePolicy: .useProtocolCachePolicy, model: User.self, body:
+        let send = try await apiManager.postRequest(url: signUpUrl, cachePolicy: .useProtocolCachePolicy, model: User.self, body:
                                                         [
                                                             "username": userName,
                                                             "email": email,

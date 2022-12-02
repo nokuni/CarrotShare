@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SignInView: View {
-    @State var fields = [String](repeating: "", count: 3)
     @State private var isShowingAlert: Bool = false
+    @State private var username: String = ""
+    @State var password: String = ""
     var body: some View {
         VStack {
-            SignInFieldsView(fields: $fields)
-            SignInButtonView(fields: $fields, isShowingAlert: $isShowingAlert)
+            SignInFieldsView(username: $username, password: $password)
+            SignInButtonView(username: $username, password: $password, isShowingAlert: $isShowingAlert)
             Spacer()
             SignInWithAppleButtonView()
             Spacer()

@@ -9,15 +9,22 @@ import SwiftUI
 
 struct SignInButtonView: View {
     @EnvironmentObject var carrotShareVM: CarrotShareViewModel
-    @Binding var fields: [String]
+    @Binding var username: String
+    @Binding var password: String
     @Binding var isShowingAlert: Bool
+    
+    var isAllFieldsFilled: Bool {
+        !username.isEmpty && !password.isEmpty
+    }
     var body: some View {
         Button(action: {
-            if fields.contains("") {
-                isShowingAlert.toggle()
-            } else {
-                carrotShareVM.isLoggedIn = true
-                #warning("Sign In logic")
+            Task {
+                if isAllFieldsFilled {
+                    carrotShareVM.isLoggedIn = true
+                } else {
+                    isShowingAlert.toggle()
+                }
+                carrotShareVM.signInResponse = try await carrotShareVM.signIn(userName: username, password: password)
             }
         }) {
             AppButtonView(text: "Sign In", color: .appGreen)
@@ -32,6 +39,6 @@ struct SignInButtonView: View {
 
 struct SignInButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInButtonView(fields: .constant([]), isShowingAlert: .constant(false))
+        SignInButtonView(username: .constant(""), password: .constant(""), isShowingAlert: .constant(false))
     }
 }

@@ -65,6 +65,8 @@ struct SignUpFieldView: View {
                 Text(selectedField?.rawValue ?? "")
                     .foregroundColor(.gray)
             }
+            .textInputAutocapitalization(.never)
+            .autocorrectionDisabled(true)
             .padding()
             .background(
                 Color(UIColor.systemGray6).cornerRadius(30)

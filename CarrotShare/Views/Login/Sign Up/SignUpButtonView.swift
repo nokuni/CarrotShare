@@ -20,11 +20,14 @@ struct SignUpButtonView: View {
     }
     var body: some View {
         Button(action: {
-            if isAllFieldsFilled {
-                carrotShareVM.isApplyingSettings = true
-                carrotShareVM.isLoggedIn = true
-            } else {
-                isShowingAlert.toggle()
+            Task {
+                if isAllFieldsFilled {
+                    carrotShareVM.isApplyingSettings = true
+                    carrotShareVM.isLoggedIn = true
+                } else {
+                    isShowingAlert.toggle()
+                }
+                carrotShareVM.user = try await carrotShareVM.signUp(userName: username, email: email, password: password)
             }
         }) {
             AppButtonView(text: "Sign Up", color: .appGreen)
