@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignInResponse: Identifiable, Codable {
+struct SignInResponse: Codable {
     var id: Int
     var username: String
     var email: String
