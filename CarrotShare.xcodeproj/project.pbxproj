@@ -47,6 +47,8 @@
 		962F2C0129389C4300524427 /* MultiDatePickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */; };
 		965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E429389D8500D6ADE8 /* SettingsView.swift */; };
 		965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E629389E6300D6ADE8 /* SettingsButtonView.swift */; };
+		A24754A2293A530700F9A8B2 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24754A1293A530700F9A8B2 /* WheelView.swift */; };
+		A24754A4293A532700F9A8B2 /* ResultWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24754A3293A532700F9A8B2 /* ResultWheelView.swift */; };
 		AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA22938A48900F38D2A /* FlatmateView.swift */; };
 		AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */; };
 		AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */; };
@@ -101,6 +103,8 @@
 		962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerGridView.swift; sourceTree = "<group>"; };
 		965468E429389D8500D6ADE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		965468E629389E6300D6ADE8 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
+		A24754A1293A530700F9A8B2 /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		A24754A3293A532700F9A8B2 /* ResultWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWheelView.swift; sourceTree = "<group>"; };
 		AC3FDCA22938A48900F38D2A /* FlatmateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateView.swift; sourceTree = "<group>"; };
 		AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateListView.swift; sourceTree = "<group>"; };
 		AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateDetailView.swift; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 			isa = PBXGroup;
 			children = (
 				962F2BE5293799D300524427 /* LetsPlayView.swift */,
+				A24754A1293A530700F9A8B2 /* WheelView.swift */,
+				A24754A3293A532700F9A8B2 /* ResultWheelView.swift */,
 			);
 			path = "Lets Play";
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */,
 				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
 				962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */,
+				A24754A4293A532700F9A8B2 /* ResultWheelView.swift in Sources */,
 				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
 				ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */,
 				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
@@ -458,6 +465,7 @@
 				962F2BCF29378A9500524427 /* SignUpButtonView.swift in Sources */,
 				962F2BE12937997E00524427 /* TabBarView.swift in Sources */,
 				AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */,
+				A24754A2293A530700F9A8B2 /* WheelView.swift in Sources */,
 				962F2BC72937862500524427 /* TextfieldPlaceholderStyle.swift in Sources */,
 				962F2BAE29376A5300524427 /* ColorExtension.swift in Sources */,
 				962F2BE6293799D300524427 /* LetsPlayView.swift in Sources */,
