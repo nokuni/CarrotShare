@@ -21,5 +21,6 @@ struct ChoresView: View {
 struct ChoresView_Previews: PreviewProvider {
     static var previews: some View {
         ChoresView()
+            .environmentObject(CarrotShareViewModel())
     }
 }

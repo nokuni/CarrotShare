@@ -51,6 +51,8 @@
 		AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */; };
 		AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */; };
 		AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA82938A55A00F38D2A /* Flatmate.swift */; };
+		AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AEF293A04870003A479 /* SmallButtonView.swift */; };
+		AC584AF8293A2CB20003A479 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AF7293A2CB20003A479 /* Rule.swift */; };
 		ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateListView.swift; sourceTree = "<group>"; };
 		AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateDetailView.swift; sourceTree = "<group>"; };
 		AC3FDCA82938A55A00F38D2A /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
+		AC584AEF293A04870003A479 /* SmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonView.swift; sourceTree = "<group>"; };
+		AC584AF7293A2CB20003A479 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeRulesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +164,7 @@
 				962F2BEE2937A9FD00524427 /* Chores.swift */,
 				962F2BF82937EFFB00524427 /* User.swift */,
 				AC3FDCA82938A55A00F38D2A /* Flatmate.swift */,
+				AC584AF7293A2CB20003A479 /* Rule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				962F2BB529376BBC00524427 /* AppButtonView.swift */,
 				962F2BBB2937710E00524427 /* TransparentAppButtonView.swift */,
 				965468E629389E6300D6ADE8 /* SettingsButtonView.swift */,
+				AC584AEF293A04870003A479 /* SmallButtonView.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				962F2BA9293768D100524427 /* CarrotShareViewModel.swift in Sources */,
 				965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */,
 				962F2BF92937EFFB00524427 /* User.swift in Sources */,
+				AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */,
 				962F2BF72937EDFD00524427 /* DateExtension.swift in Sources */,
 				AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */,
 				AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */,
@@ -417,6 +424,7 @@
 				962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */,
 				962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */,
 				962F2BFD29389BF100524427 /* DaysListView.swift in Sources */,
+				AC584AF8293A2CB20003A479 /* Rule.swift in Sources */,
 				962F2BBC2937710F00524427 /* TransparentAppButtonView.swift in Sources */,
 				962F2BD329378C6A00524427 /* SignInFieldsView.swift in Sources */,
 				965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */,

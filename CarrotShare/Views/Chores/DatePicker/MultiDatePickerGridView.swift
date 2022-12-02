@@ -37,5 +37,6 @@ struct MultiDatePickerGridView: View {
 struct MultiDatePickerGridView_Previews: PreviewProvider {
     static var previews: some View {
         MultiDatePickerGridView()
+            .environmentObject(CarrotShareViewModel())
     }
 }

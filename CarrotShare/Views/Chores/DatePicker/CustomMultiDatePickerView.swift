@@ -30,5 +30,6 @@ struct CustomMultiDatePickerView: View {
 struct CustomMultiDatePickerView_Previews: PreviewProvider {
     static var previews: some View {
         CustomMultiDatePickerView()
+            .environmentObject(CarrotShareViewModel())
     }
 }

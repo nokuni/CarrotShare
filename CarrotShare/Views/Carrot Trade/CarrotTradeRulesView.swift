@@ -42,7 +42,7 @@ struct RulesView: View {
                             .padding(.bottom, 4)
                         Text("You can choose the movie for 10 🥕")
                             .padding(.bottom, 4)
-                        Text("You can have the flat to yourself for 1 hour for 50 🥕")
+                        Text("You can have the flat to yourself for 1 hour for 25 🥕")
                             .padding(.bottom, 4)
                         Text("And you can have the flat to yourself for 2 hours for 50 🥕")
                     }
