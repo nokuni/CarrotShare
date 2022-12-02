@@ -7,24 +7,41 @@
 
 import SwiftUI
 
-struct Chore: Identifiable {
-    var id = UUID()
-    let description: String
-    let color: Color
-    let day: Int
-    var user: User
+struct Chore: Identifiable, Codable {
+    let id: Int
+    let content: String
+    let category: Category
+    var isDone: Bool
+    let day: Int?
+    var carrotAmount: Int
+    
+    enum Category: String, Codable {
+        case cleanBathRoom, dishes, cleanKitchen, takeOutRubbish, cleanLivingRoom, foodShopping, cleanToilet
+        
+        var color: Color {
+            switch self {
+            case .cleanBathRoom:
+                return .choreBlue
+            case .dishes:
+                return .choreOrange
+            case .cleanKitchen:
+                return .choreTurquoise
+            case .takeOutRubbish:
+                return .chorePink
+            case .cleanLivingRoom:
+                return .choreYellow
+            case .foodShopping:
+                return .choreGreen
+            case .cleanToilet:
+                return .choreRed
+            }
+        }
+    }
 }
 
 extension Chore {
-    static var all: [Chore] {
-        [
-            Chore(description: "Hover, mop and scrub bathroom", color: .choreBlue, day: 2, user: User.example),
-            Chore(description: "Do the dishes", color: .choreOrange, day: 6, user: User.example),
-            Chore(description: "Hover, mop and scrub kitchen", color: .choreTurquoise, day: 8, user: User.example),
-            Chore(description: "Take out rubbish", color: .chorePink, day: 23, user: User.example),
-            Chore(description: "Hover, mop and scrub living room", color: .choreYellow,  day: 16, user: User.example),
-            Chore(description: "Food shopping", color: .choreGreen,  day: 11, user: User.example),
-            Chore(description: "Scrub toilet", color: .choreRed,  day: 27, user: User.example),
-        ]
+    static func choreMock() -> Chore {
+        Chore(id: 0, content: "Nettoyer la salle de bain", category: .cleanBathRoom, isDone: false, day: 1, carrotAmount: 2)
     }
 }
+

@@ -20,7 +20,7 @@ struct DateNumberElementView: View {
                         ZStack {
                             if let chore = carrotShareVM.getChore(from: index) {
                                 Circle()
-                                    .foregroundColor(chore.color)
+                                    .foregroundColor(chore.category.color)
                                     .frame(width: UIScreen.main.bounds.height * 0.06, height: UIScreen.main.bounds.height * 0.06)
                                     .opacity(0.2)
                             }

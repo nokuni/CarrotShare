@@ -54,6 +54,9 @@
 		AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AEF293A04870003A479 /* SmallButtonView.swift */; };
 		AC584AF8293A2CB20003A479 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AF7293A2CB20003A479 /* Rule.swift */; };
 		ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */; };
+		F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BC293A3C6A005E4636 /* APIManager.swift */; };
+		F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */; };
+		F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +108,9 @@
 		AC584AEF293A04870003A479 /* SmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonView.swift; sourceTree = "<group>"; };
 		AC584AF7293A2CB20003A479 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeRulesView.swift; sourceTree = "<group>"; };
+		F4ACF0BC293A3C6A005E4636 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatshare.swift; sourceTree = "<group>"; };
+		F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		962F2B92293761D100524427 /* CarrotShare */ = {
 			isa = PBXGroup;
 			children = (
+				F4ACF0BB293A3C5F005E4636 /* Networking */,
 				962F2B93293761D100524427 /* CarrotShareApp.swift */,
 				962F2BC12937841200524427 /* Modifier */,
 				962F2BAA2937691200524427 /* Extensions */,
@@ -165,6 +172,8 @@
 				962F2BF82937EFFB00524427 /* User.swift */,
 				AC3FDCA82938A55A00F38D2A /* Flatmate.swift */,
 				AC584AF7293A2CB20003A479 /* Rule.swift */,
+				F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */,
+				F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +333,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		F4ACF0BB293A3C5F005E4636 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F4ACF0BC293A3C6A005E4636 /* APIManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -411,6 +428,8 @@
 				AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */,
 				962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */,
 				962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */,
+				F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */,
+				F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */,
 				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
 				962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */,
 				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
@@ -420,6 +439,7 @@
 				AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */,
 				962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */,
 				962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */,
+				F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */,
 				962F2BB229376B4700524427 /* LoginImageView.swift in Sources */,
 				962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */,
 				962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */,
