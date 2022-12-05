@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RulesView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -67,7 +69,15 @@ struct RulesView: View {
                 .padding()
                 Divider()
             }
-            .navigationBarTitle("Carrot trade rules")
+            .navigationBarTitle("Carrot trade rules", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    .foregroundColor(Color("AppGreen"))
+                }
+            }
         }
     }
 }
