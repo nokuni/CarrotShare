@@ -19,7 +19,7 @@ struct ResultWheelView: View {
                     dismiss()
                 }.padding(30)
                 
-                Text("Whose the Chef today?")
+                Text("Who's the Chef today?")
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
@@ -51,13 +51,13 @@ struct ResultWheelView: View {
                     Text("Nathalie")
                         .font(.largeTitle)
                 }
-                Text("Tired of chores !")
+                Text("Tired of chores!")
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
                     .padding(.vertical, 30)
                 HStack{
-                    Text("Select one rommate to \nswap your carrots with")
+                    Text("Select one roomate to \nswap your carrots with")
                         .font(.title2)
                         .foregroundColor(.white)
                     //.padding(30)

@@ -19,7 +19,7 @@ struct WheelView: View {
                     dismiss()
                 }.padding(30)
                 
-                Text("Whose the Chef today?")
+                Text("Who's the Chef today?")
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)

@@ -37,7 +37,7 @@ struct LetsPlayView: View {
                                 .padding(.trailing, 29.0)
                                 .frame(height: 70)
                             
-                            Text("Chef of \nThe day ?")
+                            Text("Chef of \nThe day?")
                                 .font(.title)
                                 .fontWeight(.semibold)
                                 .lineLimit(2)
@@ -148,7 +148,7 @@ struct LetsPlayView: View {
                 }
             }
             HStack{
-                Text("Rommate Ranking")
+                Text("Roomate Ranking")
                     .padding(15)
                     .font(.title3)
                 Spacer()

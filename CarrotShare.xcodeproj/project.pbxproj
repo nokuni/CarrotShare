@@ -53,6 +53,7 @@
 		AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA82938A55A00F38D2A /* Flatmate.swift */; };
 		AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AEF293A04870003A479 /* SmallButtonView.swift */; };
 		AC584AF8293A2CB20003A479 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AF7293A2CB20003A479 /* Rule.swift */; };
+		AC584B07293E0C0D0003A479 /* ChooseRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */; };
 		ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */; };
 		F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BC293A3C6A005E4636 /* APIManager.swift */; };
 		F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */; };
@@ -113,6 +114,7 @@
 		AC3FDCA82938A55A00F38D2A /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
 		AC584AEF293A04870003A479 /* SmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonView.swift; sourceTree = "<group>"; };
 		AC584AF7293A2CB20003A479 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRewardView.swift; sourceTree = "<group>"; };
 		ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeRulesView.swift; sourceTree = "<group>"; };
 		F4ACF0BC293A3C6A005E4636 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatshare.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			children = (
 				962F2BE7293799DC00524427 /* CarrotTradeView.swift */,
 				ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */,
+				AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */,
 			);
 			path = "Carrot Trade";
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				F4C81D2B293DE6A9008638ED /* ResultWheelView.swift in Sources */,
 				962F2BF72937EDFD00524427 /* DateExtension.swift in Sources */,
 				AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */,
+				AC584B07293E0C0D0003A479 /* ChooseRewardView.swift in Sources */,
 				AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */,
 				962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */,
 				962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */,
