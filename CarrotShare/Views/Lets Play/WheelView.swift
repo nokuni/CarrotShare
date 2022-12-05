@@ -2,11 +2,7 @@
 //  WheelView.swift
 //  CarrotShare
 //
-<<<<<<< HEAD
-//  Created by Jonathan Duong on 05/12/2022.
-=======
 //  Created by CHRISTOPHE LEHOUSSINE on 02/12/2022.
->>>>>>> refs/remotes/origin/main
 //
 
 import SwiftUI

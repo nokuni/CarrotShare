@@ -2,11 +2,7 @@
 //  ResultWheelView.swift
 //  CarrotShare
 //
-<<<<<<< HEAD
-//  Created by Jonathan Duong on 05/12/2022.
-=======
 //  Created by CHRISTOPHE LEHOUSSINE on 02/12/2022.
->>>>>>> refs/remotes/origin/main
 //
 
 import SwiftUI
@@ -100,30 +96,16 @@ struct ResultWheelView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 70)
                         .shadow(radius: 3)
-<<<<<<< HEAD
                     
                 }
-                
-=======
-            
-                }
-            
->>>>>>> refs/remotes/origin/main
             }
         }
     }
 }
-<<<<<<< HEAD
 
 struct ResultWheelView_Previews: PreviewProvider {
     static var previews: some View {
         ResultWheelView()
     }
 }
-=======
-    struct ResultWheelView_Previews: PreviewProvider {
-        static var previews: some View {
-            ResultWheelView()
-        }
-    }
->>>>>>> refs/remotes/origin/main
+
