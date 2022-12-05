@@ -67,7 +67,8 @@ struct TradeView: View {
             } label: {
                 SmallButtonView(text: "Go!", color: Color("AppGreen"))
             }
-
         }
+        .font(.title2)
+        .padding()
     }
 }
