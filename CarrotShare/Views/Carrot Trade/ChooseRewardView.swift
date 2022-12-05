@@ -36,7 +36,7 @@ struct ChooseRewardView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.accentColor
+                Color("AppGreen")
                     .ignoresSafeArea()
                 VStack {
                     Capsule()
@@ -148,7 +148,7 @@ struct ChooseRewardView: View {
                         .foregroundColor(.white)
                         .font(.title3)
                         .fontWeight(.semibold)
-                        .background(Color("AppGreen"))
+                        .background(Color("AccentColor"))
                         .clipShape(Capsule())
                     }
                     .padding()
@@ -163,7 +163,7 @@ struct ChooseRewardView: View {
                     Button("Cancel") {
                         presentationMode.wrappedValue.dismiss()
                     }
-                    .foregroundColor(Color("AppGreen"))
+                    .foregroundColor(Color("AccentColor"))
                 }
             }
         }
