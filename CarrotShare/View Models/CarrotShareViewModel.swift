@@ -15,6 +15,8 @@ class CarrotShareViewModel: ObservableObject {
     @Published var chores: [Chore] = []
     @Published var signInResponse: SignInResponse?
     @Published var isShowingLoginAlert: Bool = false
+    @Published var flatshare: Flatshare?
+    @Published var flatshares: [Flatshare]?
     
     let choreUrl = "http://localhost:8080/chores/index"
     let flatshareUrl = "http://localhost:8080/flatshares/index"

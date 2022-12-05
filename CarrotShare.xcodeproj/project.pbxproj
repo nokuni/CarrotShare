@@ -60,6 +60,9 @@
 		F4ACF0C5293B8361005E4636 /* CreateFlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */; };
 		F4C81D29293DE687008638ED /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D28293DE687008638ED /* WheelView.swift */; };
 		F4C81D2B293DE6A9008638ED /* ResultWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */; };
+		F4C81D2F293DF6AE008638ED /* FlatshareFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */; };
+		F4C81D31293DFC31008638ED /* CreateFlatshareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */; };
+		F4C81D35293E03CC008638ED /* JoinFlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +120,9 @@
 		F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlatshareView.swift; sourceTree = "<group>"; };
 		F4C81D28293DE687008638ED /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
 		F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWheelView.swift; sourceTree = "<group>"; };
+		F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatshareFieldsView.swift; sourceTree = "<group>"; };
+		F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlatshareButtonView.swift; sourceTree = "<group>"; };
+		F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFlatshareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,9 +359,28 @@
 		F4ACF0C3293B8349005E4636 /* Flatshare */ = {
 			isa = PBXGroup;
 			children = (
-				F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */,
+				F4C81D33293E03B0008638ED /* Join Flateshare */,
+				F4C81D32293E03A4008638ED /* Create Flatshare */,
 			);
 			path = Flatshare;
+			sourceTree = "<group>";
+		};
+		F4C81D32293E03A4008638ED /* Create Flatshare */ = {
+			isa = PBXGroup;
+			children = (
+				F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */,
+				F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */,
+				F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */,
+			);
+			path = "Create Flatshare";
+			sourceTree = "<group>";
+		};
+		F4C81D33293E03B0008638ED /* Join Flateshare */ = {
+			isa = PBXGroup;
+			children = (
+				F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */,
+			);
+			path = "Join Flateshare";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,12 +484,14 @@
 				AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */,
 				962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */,
 				962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */,
+				F4C81D2F293DF6AE008638ED /* FlatshareFieldsView.swift in Sources */,
 				F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */,
 				962F2BB229376B4700524427 /* LoginImageView.swift in Sources */,
 				962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */,
 				962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */,
 				962F2BFD29389BF100524427 /* DaysListView.swift in Sources */,
 				AC584AF8293A2CB20003A479 /* Rule.swift in Sources */,
+				F4C81D35293E03CC008638ED /* JoinFlatshareView.swift in Sources */,
 				962F2BBC2937710F00524427 /* TransparentAppButtonView.swift in Sources */,
 				962F2BD329378C6A00524427 /* SignInFieldsView.swift in Sources */,
 				965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */,
@@ -483,6 +510,7 @@
 				962F2BE6293799D300524427 /* LetsPlayView.swift in Sources */,
 				962F2BC02937738800524427 /* SignInView.swift in Sources */,
 				962F2BEF2937A9FD00524427 /* Chores.swift in Sources */,
+				F4C81D31293DFC31008638ED /* CreateFlatshareButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

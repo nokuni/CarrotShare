@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct FlatmatesListView: View {
+    @State var isCreateView: Bool = false
+    @State var isJoinView: Bool = false
+    @State private var isShowingAlert: Bool = false
+    @State private var name: String = ""
+    @State private var personCount: String = ""
+    @State private var roomCount: String = ""
+//    @State private var image: String? = ""
+    @State private var code: String = ""
     var body: some View {
         VStack(spacing: 25) {
             
@@ -19,15 +27,18 @@ struct FlatmatesListView: View {
                 .padding()
             
             Button(action: {
-                
+                isJoinView.toggle()
             }) {
-                AppButtonView(text: "Join a group", color: .appGreen)
+                AppButtonView(text: "Join flateshare", color: .appGreen)
             }
             
             Button(action: {
-                
+                isCreateView.toggle()
             }) {
-                AppButtonView(text: "Create a group", color: .appOrange)
+                TransparentAppButtonView(text: "Create flateshare", size: CGSize(width: UIScreen.main.bounds.width * 0.50, height: UIScreen.main.bounds.height * 0.07))
+            }
+            .sheet(isPresented: $isCreateView) {
+                CreateFlatshareView(isShowingAlert: $isShowingAlert, name: $name, personCount: $personCount, roomCount: $roomCount, code: $code)
             }
         }
     }
