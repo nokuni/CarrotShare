@@ -19,7 +19,7 @@ struct ResultWheelView: View {
                     dismiss()
                 }.padding(30)
                 
-                Text("Whose the Chef today?")
+                Text("Who's the Chef today?")
                     .font(.title)
                     .bold()
                     .foregroundColor(.white)
@@ -74,6 +74,7 @@ struct ResultWheelView: View {
                     
                 }
                 HStack {
+                    //
                     Image("christophe")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
