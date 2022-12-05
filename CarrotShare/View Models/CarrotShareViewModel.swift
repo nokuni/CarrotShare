@@ -61,6 +61,27 @@ class CarrotShareViewModel: ObservableObject {
         return nil
     }
     
+    func fetchFlatshares() async throws -> [Flatshare] {
+        let apiManager = APIManager()
+        let result = try await apiManager.getRequest(url: flatshareUrl, cachePolicy: .returnCacheDataElseLoad, model: [Flatshare].self)
+        
+        return result
+    }
+    
+    func createFlatshare(name: String, personCount: Int, roomCount: Int, image: String?, code: String) async throws -> Flatshare {
+        let apiManager = APIManager()
+        let create = try await apiManager.postRequest(url: flatshareUrl, cachePolicy: .useProtocolCachePolicy, model: Flatshare.self, body:
+                                                        [
+                                                            "name": name,
+                                                            "person_count": personCount,
+                                                            "room_count": roomCount,
+                                                            "image": image ?? "",
+                                                            "code": code
+                                                        ]
+        )
+        return create
+    }
+    
     func fetchChores() async throws -> [Chore]{
         let apiManager = APIManager()
         let result = try await apiManager.getRequest(url: choreUrl, cachePolicy: .returnCacheDataElseLoad, model: [Chore].self)
@@ -68,12 +89,6 @@ class CarrotShareViewModel: ObservableObject {
         return result
     }
     
-    func fetchFlatshares() async throws -> [Flatshare] {
-        let apiManager = APIManager()
-        let result = try await apiManager.getRequest(url: flatshareUrl, cachePolicy: .returnCacheDataElseLoad, model: [Flatshare].self)
-        
-        return result
-    }
     
     func checkLogins(isAllFieldsFilled: Bool, username: String, password: String) async  {
         print("login check")

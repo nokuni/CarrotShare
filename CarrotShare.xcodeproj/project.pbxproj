@@ -57,6 +57,9 @@
 		F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BC293A3C6A005E4636 /* APIManager.swift */; };
 		F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */; };
 		F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */; };
+		F4ACF0C5293B8361005E4636 /* CreateFlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */; };
+		F4C81D29293DE687008638ED /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D28293DE687008638ED /* WheelView.swift */; };
+		F4C81D2B293DE6A9008638ED /* ResultWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +114,9 @@
 		F4ACF0BC293A3C6A005E4636 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatshare.swift; sourceTree = "<group>"; };
 		F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlatshareView.swift; sourceTree = "<group>"; };
+		F4C81D28293DE687008638ED /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWheelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,7 @@
 		962F2BA52937689200524427 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F4ACF0C3293B8349005E4636 /* Flatshare */,
 				962F2BEB29379B9C00524427 /* Mains */,
 				962F2BE4293799C200524427 /* Lets Play */,
 				962F2BE3293799B300524427 /* Carrot Trade */,
@@ -299,6 +306,8 @@
 			isa = PBXGroup;
 			children = (
 				962F2BE5293799D300524427 /* LetsPlayView.swift */,
+				F4C81D28293DE687008638ED /* WheelView.swift */,
+				F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */,
 			);
 			path = "Lets Play";
 			sourceTree = "<group>";
@@ -339,6 +348,14 @@
 				F4ACF0BC293A3C6A005E4636 /* APIManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F4ACF0C3293B8349005E4636 /* Flatshare */ = {
+			isa = PBXGroup;
+			children = (
+				F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */,
+			);
+			path = Flatshare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,12 +440,14 @@
 				965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */,
 				962F2BF92937EFFB00524427 /* User.swift in Sources */,
 				AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */,
+				F4C81D2B293DE6A9008638ED /* ResultWheelView.swift in Sources */,
 				962F2BF72937EDFD00524427 /* DateExtension.swift in Sources */,
 				AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */,
 				AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */,
 				962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */,
 				962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */,
 				F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */,
+				F4ACF0C5293B8361005E4636 /* CreateFlatshareView.swift in Sources */,
 				F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */,
 				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
 				962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */,
@@ -436,6 +455,7 @@
 				ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */,
 				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
 				962F2BFF29389C1300524427 /* DateNumberElementView.swift in Sources */,
+				F4C81D29293DE687008638ED /* WheelView.swift in Sources */,
 				AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */,
 				962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */,
 				962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */,
