@@ -80,7 +80,7 @@ struct ChooseRewardView: View {
                                         Text("Select movie")
                                             .foregroundColor(.accentColor)
                                         Spacer()
-                                        Picker("Select movie", selection: $selectedFood) {
+                                        Picker("Select movie", selection: $selectedMovie) {
                                             Text("Action").tag(Movie.action)
                                             Text("Comedy").tag(Movie.comedy)
                                             Text("Drama").tag(Movie.drama)
@@ -172,7 +172,7 @@ struct ChooseRewardView: View {
 
 struct ChooseRewardView_Previews: PreviewProvider {
     static var previews: some View {
-        ChooseRewardView(selectedRule: .constant(Rule.rules[4]), showingSheet: .constant(false))
+        ChooseRewardView(selectedRule: .constant(Rule.rules[2]), showingSheet: .constant(false))
         //        .constant : valeur du binding sera tjrs la meme
     }
 }
