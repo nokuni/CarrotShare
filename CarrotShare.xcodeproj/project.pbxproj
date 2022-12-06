@@ -54,7 +54,6 @@
 		AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AEF293A04870003A479 /* SmallButtonView.swift */; };
 		AC584AF8293A2CB20003A479 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AF7293A2CB20003A479 /* Rule.swift */; };
 		AC584B07293E0C0D0003A479 /* ChooseRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */; };
-		AC584B09293E31B10003A479 /* LoggedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584B08293E31B10003A479 /* LoggedUserView.swift */; };
 		ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */; };
 		F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BC293A3C6A005E4636 /* APIManager.swift */; };
 		F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */; };
@@ -116,7 +115,6 @@
 		AC584AEF293A04870003A479 /* SmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonView.swift; sourceTree = "<group>"; };
 		AC584AF7293A2CB20003A479 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRewardView.swift; sourceTree = "<group>"; };
-		AC584B08293E31B10003A479 /* LoggedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedUserView.swift; path = ../../../../.Trash/CarrotShare/CarrotShare/Views/LoggedUserView.swift; sourceTree = "<group>"; };
 		ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeRulesView.swift; sourceTree = "<group>"; };
 		F4ACF0BC293A3C6A005E4636 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatshare.swift; sourceTree = "<group>"; };
@@ -213,7 +211,6 @@
 				962F2BDB2937955A00524427 /* Flatmates */,
 				962F2BB429376BAF00524427 /* Commons */,
 				962F2BB329376BA800524427 /* Login */,
-				AC584B08293E31B10003A479 /* LoggedUserView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -476,7 +473,6 @@
 				AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */,
 				AC584B07293E0C0D0003A479 /* ChooseRewardView.swift in Sources */,
 				AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */,
-				AC584B09293E31B10003A479 /* LoggedUserView.swift in Sources */,
 				962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */,
 				962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */,
 				F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */,
