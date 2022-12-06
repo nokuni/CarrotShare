@@ -47,18 +47,24 @@
 		962F2C0129389C4300524427 /* MultiDatePickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */; };
 		965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E429389D8500D6ADE8 /* SettingsView.swift */; };
 		965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E629389E6300D6ADE8 /* SettingsButtonView.swift */; };
-		A24754A2293A530700F9A8B2 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24754A1293A530700F9A8B2 /* WheelView.swift */; };
-		A24754A4293A532700F9A8B2 /* ResultWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24754A3293A532700F9A8B2 /* ResultWheelView.swift */; };
 		AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA22938A48900F38D2A /* FlatmateView.swift */; };
 		AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */; };
 		AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */; };
 		AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA82938A55A00F38D2A /* Flatmate.swift */; };
 		AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AEF293A04870003A479 /* SmallButtonView.swift */; };
 		AC584AF8293A2CB20003A479 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584AF7293A2CB20003A479 /* Rule.swift */; };
+		AC584B07293E0C0D0003A479 /* ChooseRewardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */; };
+		AC584B09293E31B10003A479 /* LoggedUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC584B08293E31B10003A479 /* LoggedUserView.swift */; };
 		ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */; };
 		F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BC293A3C6A005E4636 /* APIManager.swift */; };
 		F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */; };
 		F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */; };
+		F4ACF0C5293B8361005E4636 /* CreateFlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */; };
+		F4C81D29293DE687008638ED /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D28293DE687008638ED /* WheelView.swift */; };
+		F4C81D2B293DE6A9008638ED /* ResultWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */; };
+		F4C81D2F293DF6AE008638ED /* FlatshareFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */; };
+		F4C81D31293DFC31008638ED /* CreateFlatshareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */; };
+		F4C81D35293E03CC008638ED /* JoinFlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,18 +109,24 @@
 		962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerGridView.swift; sourceTree = "<group>"; };
 		965468E429389D8500D6ADE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		965468E629389E6300D6ADE8 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
-		A24754A1293A530700F9A8B2 /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
-		A24754A3293A532700F9A8B2 /* ResultWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWheelView.swift; sourceTree = "<group>"; };
 		AC3FDCA22938A48900F38D2A /* FlatmateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateView.swift; sourceTree = "<group>"; };
 		AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateListView.swift; sourceTree = "<group>"; };
 		AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateDetailView.swift; sourceTree = "<group>"; };
 		AC3FDCA82938A55A00F38D2A /* Flatmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatmate.swift; sourceTree = "<group>"; };
 		AC584AEF293A04870003A479 /* SmallButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButtonView.swift; sourceTree = "<group>"; };
 		AC584AF7293A2CB20003A479 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseRewardView.swift; sourceTree = "<group>"; };
+		AC584B08293E31B10003A479 /* LoggedUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggedUserView.swift; path = ../../../../.Trash/CarrotShare/CarrotShare/Views/LoggedUserView.swift; sourceTree = "<group>"; };
 		ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeRulesView.swift; sourceTree = "<group>"; };
 		F4ACF0BC293A3C6A005E4636 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flatshare.swift; sourceTree = "<group>"; };
 		F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlatshareView.swift; sourceTree = "<group>"; };
+		F4C81D28293DE687008638ED /* WheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
+		F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWheelView.swift; sourceTree = "<group>"; };
+		F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatshareFieldsView.swift; sourceTree = "<group>"; };
+		F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlatshareButtonView.swift; sourceTree = "<group>"; };
+		F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFlatshareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +205,7 @@
 		962F2BA52937689200524427 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F4ACF0C3293B8349005E4636 /* Flatshare */,
 				962F2BEB29379B9C00524427 /* Mains */,
 				962F2BE4293799C200524427 /* Lets Play */,
 				962F2BE3293799B300524427 /* Carrot Trade */,
@@ -200,6 +213,7 @@
 				962F2BDB2937955A00524427 /* Flatmates */,
 				962F2BB429376BAF00524427 /* Commons */,
 				962F2BB329376BA800524427 /* Login */,
+				AC584B08293E31B10003A479 /* LoggedUserView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -295,6 +309,7 @@
 			children = (
 				962F2BE7293799DC00524427 /* CarrotTradeView.swift */,
 				ACFDC4FC2938FA8A008F8AF7 /* CarrotTradeRulesView.swift */,
+				AC584B06293E0C0D0003A479 /* ChooseRewardView.swift */,
 			);
 			path = "Carrot Trade";
 			sourceTree = "<group>";
@@ -303,8 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				962F2BE5293799D300524427 /* LetsPlayView.swift */,
-				A24754A1293A530700F9A8B2 /* WheelView.swift */,
-				A24754A3293A532700F9A8B2 /* ResultWheelView.swift */,
+				F4C81D28293DE687008638ED /* WheelView.swift */,
+				F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */,
 			);
 			path = "Lets Play";
 			sourceTree = "<group>";
@@ -345,6 +360,33 @@
 				F4ACF0BC293A3C6A005E4636 /* APIManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		F4ACF0C3293B8349005E4636 /* Flatshare */ = {
+			isa = PBXGroup;
+			children = (
+				F4C81D33293E03B0008638ED /* Join Flateshare */,
+				F4C81D32293E03A4008638ED /* Create Flatshare */,
+			);
+			path = Flatshare;
+			sourceTree = "<group>";
+		};
+		F4C81D32293E03A4008638ED /* Create Flatshare */ = {
+			isa = PBXGroup;
+			children = (
+				F4ACF0C4293B8361005E4636 /* CreateFlatshareView.swift */,
+				F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */,
+				F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */,
+			);
+			path = "Create Flatshare";
+			sourceTree = "<group>";
+		};
+		F4C81D33293E03B0008638ED /* Join Flateshare */ = {
+			isa = PBXGroup;
+			children = (
+				F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */,
+			);
+			path = "Join Flateshare";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,29 +471,35 @@
 				965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */,
 				962F2BF92937EFFB00524427 /* User.swift in Sources */,
 				AC584AF0293A04870003A479 /* SmallButtonView.swift in Sources */,
+				F4C81D2B293DE6A9008638ED /* ResultWheelView.swift in Sources */,
 				962F2BF72937EDFD00524427 /* DateExtension.swift in Sources */,
 				AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */,
+				AC584B07293E0C0D0003A479 /* ChooseRewardView.swift in Sources */,
 				AC3FDCA92938A55A00F38D2A /* Flatmate.swift in Sources */,
+				AC584B09293E31B10003A479 /* LoggedUserView.swift in Sources */,
 				962F2BFB29389AD400524427 /* ChoresCollectionView.swift in Sources */,
 				962F2BED29379BB400524427 /* OnBoardingView.swift in Sources */,
 				F4ACF0BD293A3C6A005E4636 /* APIManager.swift in Sources */,
+				F4ACF0C5293B8361005E4636 /* CreateFlatshareView.swift in Sources */,
 				F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */,
 				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
 				962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */,
-				A24754A4293A532700F9A8B2 /* ResultWheelView.swift in Sources */,
 				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
 				ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */,
 				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
 				962F2BFF29389C1300524427 /* DateNumberElementView.swift in Sources */,
+				F4C81D29293DE687008638ED /* WheelView.swift in Sources */,
 				AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */,
 				962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */,
 				962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */,
+				F4C81D2F293DF6AE008638ED /* FlatshareFieldsView.swift in Sources */,
 				F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */,
 				962F2BB229376B4700524427 /* LoginImageView.swift in Sources */,
 				962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */,
 				962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */,
 				962F2BFD29389BF100524427 /* DaysListView.swift in Sources */,
 				AC584AF8293A2CB20003A479 /* Rule.swift in Sources */,
+				F4C81D35293E03CC008638ED /* JoinFlatshareView.swift in Sources */,
 				962F2BBC2937710F00524427 /* TransparentAppButtonView.swift in Sources */,
 				962F2BD329378C6A00524427 /* SignInFieldsView.swift in Sources */,
 				965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */,
@@ -465,12 +513,12 @@
 				962F2BCF29378A9500524427 /* SignUpButtonView.swift in Sources */,
 				962F2BE12937997E00524427 /* TabBarView.swift in Sources */,
 				AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */,
-				A24754A2293A530700F9A8B2 /* WheelView.swift in Sources */,
 				962F2BC72937862500524427 /* TextfieldPlaceholderStyle.swift in Sources */,
 				962F2BAE29376A5300524427 /* ColorExtension.swift in Sources */,
 				962F2BE6293799D300524427 /* LetsPlayView.swift in Sources */,
 				962F2BC02937738800524427 /* SignInView.swift in Sources */,
 				962F2BEF2937A9FD00524427 /* Chores.swift in Sources */,
+				F4C81D31293DFC31008638ED /* CreateFlatshareButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

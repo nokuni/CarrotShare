@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct SignUpView: View {
     @State private var isShowingAlert: Bool = false
     @State private var username: String = ""

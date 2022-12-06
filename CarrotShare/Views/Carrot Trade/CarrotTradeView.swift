@@ -2,14 +2,16 @@
 //  CarrotTradeView.swift
 //  CarrotShare
 //
-//  Created by Maertens Yann-Christophe on 30/11/22.
+//  Created by N N on 02/12/2022.
 //
 
 import SwiftUI
 
 struct CarrotTradeView: View {
     @State private var showingSheet = false
-    
+    @State private var showingTrade = false
+    @State private var selectedRule: Rule?
+   
     var body: some View {
         NavigationView {
             ScrollView {
@@ -21,16 +23,20 @@ struct CarrotTradeView: View {
                     }
                     .ignoresSafeArea()
                     
-                    ForEach(rules, id: \.id) { rule in
-                        TradeView(rule: rule)
+                    ForEach(Rule.rules, id: \.id) { rule in
+                        TradeView(rule: rule, selectedRule: $selectedRule, showingTrade: $showingTrade)
                     }
                     
                     Button("Want to know more about carrot trade?") {
                         showingSheet.toggle()
                     }
+                    .padding(.bottom)
                     .foregroundColor(.accentColor)
                     .sheet(isPresented: $showingSheet) {
                         RulesView()
+                    }
+                    .sheet(isPresented: $showingTrade) {
+                        ChooseRewardView(selectedRule: $selectedRule, showingSheet: $showingTrade)
                     }
                 }
             }
@@ -47,12 +53,20 @@ struct CarrotTradeView_Previews: PreviewProvider {
 
 struct TradeView: View {
     var rule: Rule
+    @Binding var selectedRule: Rule?
+    @Binding var showingTrade: Bool
     
     var body: some View {
+
         HStack {
             Text("\(rule.text) \(rule.amount) 🥕")
             Spacer()
-            SmallButtonView(text: "Go!", color: Color("AppGreen"))
+            Button {
+                selectedRule = rule
+                showingTrade.toggle()
+            } label: {
+                SmallButtonView(text: "Go!", color: Color("AppGreen"))
+            }
         }
         .font(.title2)
         .padding()

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RulesView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -27,8 +29,6 @@ struct RulesView: View {
                             .padding(.bottom, 4)
                         Text("If you skip your chore, you lose 2 🥕")
                     }
-                    .font(.body)
-                    .foregroundColor(.gray)
                 }
                 .padding()
                 Divider()
@@ -46,8 +46,6 @@ struct RulesView: View {
                             .padding(.bottom, 4)
                         Text("And you can have the flat to yourself for 2 hours for 50 🥕")
                     }
-                    .font(.body)
-                    .foregroundColor(.gray)
                 }
                 .padding()
                 Divider()
@@ -61,13 +59,19 @@ struct RulesView: View {
                             .padding(.bottom, 4)
                         Text("The more 🏆🏆🏆 you get, the more you become the perfect flatmate!")
                     }
-                    .font(.body)
-                    .foregroundColor(.gray)
                 }
                 .padding()
                 Divider()
             }
-            .navigationBarTitle("Carrot trade rules")
+            .navigationBarTitle("Carrot trade rules", displayMode: .inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("Cancel") {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    .foregroundColor(Color("AppGreen"))
+                }
+            }
         }
     }
 }

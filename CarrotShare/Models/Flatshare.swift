@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Flatshare: Codable {
-    var name: String
-    var personCount: Int
-    var roomCount: Int
+struct Flatshare: Codable, Hashable {
+    var name: String?
+    var personCount: Int?
+    var roomCount: Int?
     var image: String?
-    var code: String
+    var code: String?
 }

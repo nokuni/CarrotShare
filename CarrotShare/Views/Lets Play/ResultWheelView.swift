@@ -51,13 +51,13 @@ struct ResultWheelView: View {
                     Text("Nathalie")
                         .font(.largeTitle)
                 }
-                Text("Tired of chores !")
+                Text("Tired of chores!")
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
                     .padding(.vertical, 30)
                 HStack{
-                    Text("Select one rommate to \nswap your carrots with")
+                    Text("Select one roomate to \nswap your carrots with")
                         .font(.title2)
                         .foregroundColor(.white)
                     //.padding(30)
@@ -97,15 +97,16 @@ struct ResultWheelView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 70)
                         .shadow(radius: 3)
-            
+                    
                 }
-            
             }
         }
     }
 }
-    struct ResultWheelView_Previews: PreviewProvider {
-        static var previews: some View {
-            ResultWheelView()
-        }
+
+struct ResultWheelView_Previews: PreviewProvider {
+    static var previews: some View {
+        ResultWheelView()
     }
+}
+

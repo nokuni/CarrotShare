@@ -31,6 +31,7 @@ struct LetsPlayView: View {
                                 .frame(height: 170)
                                 .padding(30)
                             
+<<<<<<< HEAD
                             VStack {
                                 Image("chef")
                                     .resizable()
@@ -45,6 +46,14 @@ struct LetsPlayView: View {
                                     .foregroundColor(.white)
                                     .padding(.trailing, 40.0)
                             }
+=======
+                            Text("Chef of \nThe day?")
+                                .font(.title)
+                                .fontWeight(.semibold)
+                                .lineLimit(2)
+                                .foregroundColor(.white)
+                                .padding(.trailing, 40.0)
+>>>>>>> 78df7f7681eaa7cb2358e066137e4c9baab003bc
                         }
                         
                     }
@@ -148,6 +157,7 @@ struct LetsPlayView: View {
                         }.padding(30)
                     }
                 }
+<<<<<<< HEAD
                 HStack{
                     Text("Rommate Ranking")
                         .padding(15)
@@ -156,6 +166,17 @@ struct LetsPlayView: View {
                 }
                 HStack{
                     Image("yannc")
+=======
+            }
+            HStack{
+                Text("Roomate Ranking")
+                    .padding(15)
+                    .font(.title3)
+                Spacer()
+            }
+            HStack{
+                Image("yannc")
+>>>>>>> 78df7f7681eaa7cb2358e066137e4c9baab003bc
                     
                     Image("nat")
                         .padding([.leading, .bottom, .trailing], 28 )
@@ -176,3 +197,4 @@ struct LetsPlayView_Previews: PreviewProvider {
         LetsPlayView()
     }
 }
+

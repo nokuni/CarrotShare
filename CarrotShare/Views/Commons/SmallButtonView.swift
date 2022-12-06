@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct SmallButtonView: View {
+    
     var text: String
     var color: Color
+    
     var body: some View {
         Capsule()
             .foregroundColor(color)

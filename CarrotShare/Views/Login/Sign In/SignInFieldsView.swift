@@ -31,7 +31,6 @@ struct SignInFieldsView: View {
                 print("error")
             }
         }
-        
     }
 }
 

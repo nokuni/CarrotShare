@@ -14,11 +14,44 @@ class CarrotShareViewModel: ObservableObject {
     @Published var user: User?
     @Published var chores: [Chore] = []
     @Published var signInResponse: SignInResponse?
+    @Published var isShowingLoginAlert: Bool = false
+    @Published var flatshare: Flatshare?
+    @Published var flatshares: [Flatshare]?
     
     let choreUrl = "http://localhost:8080/chores/index"
     let flatshareUrl = "http://localhost:8080/flatshares/index"
     let signUpUrl = "http://localhost:8080/api/signup"
-    let signInUrl = "http://localhost:8080/api/signup"
+    let signInUrl = "http://localhost:8080/api/signin"
+    
+    @Published var signInAlertError: SignInAlertError = .none
+    
+    enum SignInAlertError: String {
+        case none = "No Error"
+        case incompleteFields = "The fields need to be completed"
+        case wrongLogins = "The logins are wrong"
+        
+        var title: String {
+            switch self {
+            case .none:
+                return "No Error"
+            case .incompleteFields:
+                return "Incompleted Fields"
+            case .wrongLogins:
+                return "Incorrect Logins"
+            }
+        }
+        
+        var message: String {
+            switch self {
+            case .none:
+                return "No Error"
+            case .incompleteFields:
+                return "The fields need to be completed"
+            case .wrongLogins:
+                return "The logins are wrong"
+            }
+        }
+    }
     
     func getChore(from index: Int) -> Chore? {
         if let choreIndex = chores.firstIndex(where: {_ in
@@ -30,13 +63,6 @@ class CarrotShareViewModel: ObservableObject {
         return nil
     }
     
-    func fetchChores() async throws -> [Chore]{
-        let apiManager = APIManager()
-        let result = try await apiManager.getRequest(url: choreUrl, cachePolicy: .returnCacheDataElseLoad, model: [Chore].self)
-        
-        return result
-    }
-    
     func fetchFlatshares() async throws -> [Flatshare] {
         let apiManager = APIManager()
         let result = try await apiManager.getRequest(url: flatshareUrl, cachePolicy: .returnCacheDataElseLoad, model: [Flatshare].self)
@@ -44,10 +70,42 @@ class CarrotShareViewModel: ObservableObject {
         return result
     }
     
+    func createFlatshare(name: String, personCount: Int, roomCount: Int, image: String?, code: String) async throws -> Flatshare {
+        let apiManager = APIManager()
+        let create = try await apiManager.postRequest(url: flatshareUrl, cachePolicy: .useProtocolCachePolicy, model: Flatshare.self, body:
+                                                        [
+                                                            "name": name,
+                                                            "person_count": personCount,
+                                                            "room_count": roomCount,
+                                                            "image": image ?? "",
+                                                            "code": code
+                                                        ]
+        )
+        return create
+    }
+    
+    func fetchChores() async throws -> [Chore]{
+        let apiManager = APIManager()
+        let result = try await apiManager.getRequest(url: choreUrl, cachePolicy: .returnCacheDataElseLoad, model: [Chore].self)
+        
+        return result
+    }
+    
+    
+    func checkLogins(isAllFieldsFilled: Bool, username: String, password: String) async  {
+        print("login check")
+        let isLoggingCorrect = signInResponse?.username == username && signInResponse?.password == password
+        if isAllFieldsFilled && isLoggingCorrect {
+            DispatchQueue.main.async { self.isLoggedIn = true }
+        }
+    }
+    
     func signIn(userName: String, password: String) async throws -> SignInResponse {
         let apiManager = APIManager()
         let connexion = try await apiManager.postRequest(url: signInUrl, cachePolicy: .useProtocolCachePolicy, model: SignInResponse.self, body: [
+            "id": 1,
             "username": userName,
+            "email": "iJoe@email.com",
             "password": password,
         ])
         return connexion
@@ -64,3 +122,6 @@ class CarrotShareViewModel: ObservableObject {
         return send
     }
 }
+
+
+
