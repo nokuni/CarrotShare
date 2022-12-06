@@ -15,7 +15,7 @@ struct SettingsView: View {
     var body: some View {
         VStack {
             Button(action: {
-                #warning("Upload picture logic")
+               //-MARK: add action
             }) {
                 TransparentAppButtonView(text: "Upload your picture", size: CGSize(width: UIScreen.main.bounds.width * 0.8, height: UIScreen.main.bounds.height * 0.07))
             }

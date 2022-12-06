@@ -47,6 +47,10 @@
 		962F2C0129389C4300524427 /* MultiDatePickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */; };
 		965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E429389D8500D6ADE8 /* SettingsView.swift */; };
 		965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965468E629389E6300D6ADE8 /* SettingsButtonView.swift */; };
+		A25DB050293F3E7F00156B57 /* WheelBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DB04F293F3E7F00156B57 /* WheelBoardView.swift */; };
+		A25DB052293F3E9300156B57 /* WheelBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DB051293F3E9300156B57 /* WheelBackgroundView.swift */; };
+		A25DB054293F3EAA00156B57 /* LaunchWheelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DB053293F3EAA00156B57 /* LaunchWheelButtonView.swift */; };
+		A25DB056293F3EE300156B57 /* Wheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DB055293F3EE300156B57 /* Wheel.swift */; };
 		AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA22938A48900F38D2A /* FlatmateView.swift */; };
 		AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */; };
 		AC3FDCA72938A4F900F38D2A /* FlatmateDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */; };
@@ -108,6 +112,10 @@
 		962F2C0029389C4300524427 /* MultiDatePickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiDatePickerGridView.swift; sourceTree = "<group>"; };
 		965468E429389D8500D6ADE8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		965468E629389E6300D6ADE8 /* SettingsButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonView.swift; sourceTree = "<group>"; };
+		A25DB04F293F3E7F00156B57 /* WheelBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelBoardView.swift; sourceTree = "<group>"; };
+		A25DB051293F3E9300156B57 /* WheelBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelBackgroundView.swift; sourceTree = "<group>"; };
+		A25DB053293F3EAA00156B57 /* LaunchWheelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchWheelButtonView.swift; sourceTree = "<group>"; };
+		A25DB055293F3EE300156B57 /* Wheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wheel.swift; sourceTree = "<group>"; };
 		AC3FDCA22938A48900F38D2A /* FlatmateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateView.swift; sourceTree = "<group>"; };
 		AC3FDCA42938A4B000F38D2A /* FlatmateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateListView.swift; sourceTree = "<group>"; };
 		AC3FDCA62938A4F900F38D2A /* FlatmateDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmateDetailView.swift; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				962F2BA8293768D100524427 /* CarrotShareViewModel.swift */,
+				A25DB055293F3EE300156B57 /* Wheel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -317,6 +326,9 @@
 				962F2BE5293799D300524427 /* LetsPlayView.swift */,
 				F4C81D28293DE687008638ED /* WheelView.swift */,
 				F4C81D2A293DE6A9008638ED /* ResultWheelView.swift */,
+				A25DB04F293F3E7F00156B57 /* WheelBoardView.swift */,
+				A25DB051293F3E9300156B57 /* WheelBackgroundView.swift */,
+				A25DB053293F3EAA00156B57 /* LaunchWheelButtonView.swift */,
 			);
 			path = "Lets Play";
 			sourceTree = "<group>";
@@ -483,12 +495,14 @@
 				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
 				ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */,
 				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
+				A25DB054293F3EAA00156B57 /* LaunchWheelButtonView.swift in Sources */,
 				962F2BFF29389C1300524427 /* DateNumberElementView.swift in Sources */,
 				F4C81D29293DE687008638ED /* WheelView.swift in Sources */,
 				AC3FDCA52938A4B000F38D2A /* FlatmateListView.swift in Sources */,
 				962F2BAC2937691D00524427 /* BundleExtension.swift in Sources */,
 				962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */,
 				F4C81D2F293DF6AE008638ED /* FlatshareFieldsView.swift in Sources */,
+				A25DB052293F3E9300156B57 /* WheelBackgroundView.swift in Sources */,
 				F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */,
 				962F2BB229376B4700524427 /* LoginImageView.swift in Sources */,
 				962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */,
@@ -497,6 +511,7 @@
 				AC584AF8293A2CB20003A479 /* Rule.swift in Sources */,
 				F4C81D35293E03CC008638ED /* JoinFlatshareView.swift in Sources */,
 				962F2BBC2937710F00524427 /* TransparentAppButtonView.swift in Sources */,
+				A25DB050293F3E7F00156B57 /* WheelBoardView.swift in Sources */,
 				962F2BD329378C6A00524427 /* SignInFieldsView.swift in Sources */,
 				965468E529389D8500D6ADE8 /* SettingsView.swift in Sources */,
 				962F2BCB293788ED00524427 /* SignUpFieldsView.swift in Sources */,
@@ -507,6 +522,7 @@
 				962F2BB82937705900524427 /* GoToSignInView.swift in Sources */,
 				962F2BB629376BBC00524427 /* AppButtonView.swift in Sources */,
 				962F2BCF29378A9500524427 /* SignUpButtonView.swift in Sources */,
+				A25DB056293F3EE300156B57 /* Wheel.swift in Sources */,
 				962F2BE12937997E00524427 /* TabBarView.swift in Sources */,
 				AC3FDCA32938A48900F38D2A /* FlatmateView.swift in Sources */,
 				962F2BC72937862500524427 /* TextfieldPlaceholderStyle.swift in Sources */,
