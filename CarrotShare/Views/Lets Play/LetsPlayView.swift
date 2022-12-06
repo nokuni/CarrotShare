@@ -24,10 +24,6 @@ struct LetsPlayView: View {
                                 .frame(height: 170)
                                 .padding(30)
                             
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7410278 (add wheel)
                             VStack {
                                 Image("chef")
                                     .resizable()
@@ -42,27 +38,13 @@ struct LetsPlayView: View {
                                     .foregroundColor(.white)
                                     .padding(.trailing, 40.0)
                             }
-<<<<<<< HEAD
-=======
-                            Text("Chef of \nThe day?")
-                                .font(.title)
-                                .fontWeight(.semibold)
-                                .lineLimit(2)
-                                .foregroundColor(.white)
-                                .padding(.trailing, 40.0)
->>>>>>> 78df7f7681eaa7cb2358e066137e4c9baab003bc
-=======
->>>>>>> 7410278 (add wheel)
                         }
                         
                     }
                 } .sheet(isPresented: $showingSheet) {
                     // Ajouter
-<<<<<<< HEAD
-                    ResultWheelView()
-=======
+//                    ResultWheelView()
                     WheelView(wheel: Wheel())
->>>>>>> 7410278 (add wheel)
                 }
                 HStack {
                     
@@ -160,21 +142,6 @@ struct LetsPlayView: View {
                         }.padding(30)
                     }
                 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 7410278 (add wheel)
-                HStack{
-                    Text("Rommate Ranking")
-                        .padding(15)
-                        .font(.title3)
-                    Spacer()
-                }
-                HStack{
-                    Image("yannc")
-<<<<<<< HEAD
-=======
-            }
             HStack{
                 Text("Roomate Ranking")
                     .padding(15)
@@ -183,9 +150,6 @@ struct LetsPlayView: View {
             }
             HStack{
                 Image("yannc")
->>>>>>> 78df7f7681eaa7cb2358e066137e4c9baab003bc
-=======
->>>>>>> 7410278 (add wheel)
                     
                     Image("nat")
                         .padding([.leading, .bottom, .trailing], 28 )
