@@ -12,16 +12,20 @@ class CarrotShareViewModel: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var isApplyingSettings: Bool = false
     @Published var user: User?
+    @Published var users: [User]?
     @Published var chores: [Chore] = []
     @Published var signInResponse: SignInResponse?
     @Published var isShowingLoginAlert: Bool = false
     @Published var flatshare: Flatshare?
     @Published var flatshares: [Flatshare]?
+    @Published var flatshareResponse: FlatshareResponse?
     
     let choreUrl = "http://localhost:8080/chores/index"
     let flatshareUrl = "http://localhost:8080/flatshares/index"
     let signUpUrl = "http://localhost:8080/api/signup"
     let signInUrl = "http://localhost:8080/api/signin"
+    let usersUrl = "http://localhost:8080/users/index"
+    let currentUserUrl = "http://localhost:8080/users/"
     
     @Published var signInAlertError: SignInAlertError = .none
     
@@ -63,14 +67,21 @@ class CarrotShareViewModel: ObservableObject {
         return nil
     }
     
-    func fetchFlatshares() async throws -> [Flatshare] {
+    func getFlatshares() async throws -> [Flatshare] {
         let apiManager = APIManager()
-        let result = try await apiManager.getRequest(url: flatshareUrl, cachePolicy: .returnCacheDataElseLoad, model: [Flatshare].self)
+        let result = try await apiManager.getRequest(url: flatshareUrl, cachePolicy: .useProtocolCachePolicy, model: [Flatshare].self)
         
         return result
     }
     
-    func createFlatshare(name: String, personCount: Int, roomCount: Int, image: String?, code: String) async throws -> Flatshare {
+    func getUsers() async throws -> [User] {
+        let apiManager = APIManager()
+        let users = try await apiManager.getRequest(url: usersUrl, cachePolicy: .useProtocolCachePolicy, model: [User].self)
+        
+        return users
+    }
+    
+    func createFlatshare(name: String, personCount: String, roomCount: String, image: String?, code: String) async throws -> Flatshare {
         let apiManager = APIManager()
         let create = try await apiManager.postRequest(url: flatshareUrl, cachePolicy: .useProtocolCachePolicy, model: Flatshare.self, body:
                                                         [
@@ -86,7 +97,7 @@ class CarrotShareViewModel: ObservableObject {
     
     func fetchChores() async throws -> [Chore]{
         let apiManager = APIManager()
-        let result = try await apiManager.getRequest(url: choreUrl, cachePolicy: .returnCacheDataElseLoad, model: [Chore].self)
+        let result = try await apiManager.getRequest(url: choreUrl, cachePolicy: .useProtocolCachePolicy, model: [Chore].self)
         
         return result
     }
@@ -103,11 +114,10 @@ class CarrotShareViewModel: ObservableObject {
     func signIn(userName: String, password: String) async throws -> SignInResponse {
         let apiManager = APIManager()
         let connexion = try await apiManager.postRequest(url: signInUrl, cachePolicy: .useProtocolCachePolicy, model: SignInResponse.self, body: [
-            "id": 1,
             "username": userName,
-            "email": "iJoe@email.com",
             "password": password,
         ])
+        
         return connexion
     }
     
@@ -120,6 +130,30 @@ class CarrotShareViewModel: ObservableObject {
                                                             "password": password
                                                         ])
         return send
+    }
+    
+    func fetchUser() async throws -> User {
+        let apiManager = APIManager()
+        let url = currentUserUrl + "\(signInResponse!.id)"
+        print(url)
+        let currentUser = try await apiManager.getRequest(url: url, cachePolicy: .useProtocolCachePolicy, model: User.self)
+        
+        return currentUser
+    }
+    
+    func joinFlatshare(index: Int, code: String) async throws -> FlatshareResponse{
+        let apiManager = APIManager()
+        let join = try await apiManager.postRequest(
+            url: "joinFlatshareUrl\(index)",
+            cachePolicy: .useProtocolCachePolicy,
+            model: FlatshareResponse.self,
+            body:
+                [
+                    "code": code,
+                    "userId": user!.id
+                ])
+        
+        return join
     }
 }
 

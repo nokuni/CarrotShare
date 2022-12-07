@@ -31,6 +31,7 @@ class APIManager {
             }
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
+            
             let result = try decoder.decode(M.self, from: data)
             print(result)
             return result

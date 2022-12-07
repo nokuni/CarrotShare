@@ -7,10 +7,16 @@
 
 import Foundation
 
-struct Flatshare: Codable, Hashable {
+struct Flatshare: Codable, Identifiable {
+    var id: Int?
     var name: String?
-    var personCount: Int?
-    var roomCount: Int?
+    var personCount: String?
+    var roomCount: String?
     var image: String?
     var code: String?
+    var user: [User]?
+    
+    enum CodingKeys: String, CodingKey {
+        case id, name, personCount, roomCount, image, code
+    }
 }

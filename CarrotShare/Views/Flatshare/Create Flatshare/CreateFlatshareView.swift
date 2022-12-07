@@ -14,18 +14,18 @@ struct CreateFlatshareView: View {
     @Binding var name: String
     @Binding var personCount: String
     @Binding var roomCount: String
-//    @State private var image: String? = ""
+    @Binding var image: String
     @Binding var code: String
     
     var body: some View {
         VStack {
             FlatshareFieldsView(name: $name, personCount: $personCount, roomCount: $roomCount, code: $code)
-            CreateFlatshareButtonView(name: $name, personCount: $personCount, roomCount: $roomCount, code: $code, isShowingAlert: $isShowingAlert)
+            CreateFlatshareButtonView(name: $name, personCount: $personCount, roomCount: $roomCount, code: $code, image: $image, isShowingAlert: $isShowingAlert)
             Spacer()
         }
         .navigationTitle("Create your flatshare")
         .background {
-            Color.appOrange
+            Color.appGreen
                 .ignoresSafeArea()
         }
     }
@@ -33,6 +33,6 @@ struct CreateFlatshareView: View {
 
 struct CreateFlatshareView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateFlatshareView(isShowingAlert: .constant(false), name: .constant(""), personCount: .constant(""), roomCount: .constant(""), code: .constant(""))
+        CreateFlatshareView(isShowingAlert: .constant(false), name: .constant(""), personCount: .constant(""), roomCount: .constant(""), image: .constant(""), code: .constant(""))
     }
 }

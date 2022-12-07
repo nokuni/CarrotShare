@@ -8,25 +8,34 @@
 import SwiftUI
 
 struct FlatmateView: View {
-    @State var flatmate: Flatmate
+    
+    var user: User
     
     var body: some View {
         HStack {
-            Image(flatmate.imageName)
-                .resizable()
-                .frame(width: 120, height: 120)
+            if let image = user.image {
+                Image(image)
+                    .resizable()
+                    .frame(width: 120, height: 120)
+            }
             
             VStack(alignment: .leading, spacing: 12) {
-                Text(flatmate.name)
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 6)
-                Text("\(flatmate.carrotNumber) 🥕")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                Text("\(flatmate.trophyNumber) 🏆")
-                    .font(.headline)
-                    .fontWeight(.semibold)
+                if let username = user.username {
+                    Text(username)
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 6)
+                }
+                if let carrotWallet = user.carrotWallet {
+                    Text("\(carrotWallet) 🥕")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                }
+                if let trophy = user.trophy {
+                    Text("\(trophy) 🏆")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                }
             }
             .padding()
         }
@@ -35,6 +44,6 @@ struct FlatmateView: View {
 
 struct FlatmateView_Previews: PreviewProvider {
     static var previews: some View {
-        FlatmateView(flatmate: Flatmate(name: "Christophe", imageName: "christophe", carrotNumber: 7, trophyNumber: 1))
+        FlatmateView(user: .mock())
     }
 }

@@ -11,8 +11,12 @@ struct FlatmatesView: View {
     @EnvironmentObject var carrotShareVM: CarrotShareViewModel
     var body: some View {
         NavigationView {
-            FlatmatesListView()
-                .navigationTitle("Flatmates")
+            if let _ = carrotShareVM.flatshareResponse {
+                FlatmateListView()
+                    .navigationTitle("Flatmates")
+            } else {
+                FlatshareView()
+            }
         }
     }
 }

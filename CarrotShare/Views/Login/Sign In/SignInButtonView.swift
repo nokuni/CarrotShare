@@ -19,6 +19,7 @@ struct SignInButtonView: View {
                     do {
                         carrotShareVM.signInResponse = try await carrotShareVM.signIn(userName: username, password: password)
                         await carrotShareVM.checkLogins(isAllFieldsFilled: isAllFieldsFilled, username: username, password: password)
+                        carrotShareVM.user = try await carrotShareVM.fetchUser()
                     } catch {
                         carrotShareVM.signInAlertError = .wrongLogins
                         carrotShareVM.isShowingLoginAlert.toggle()

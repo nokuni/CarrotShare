@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct FlatmateDetailView: View {
-    @State var flatmate: Flatmate
+    
+    var user: User
     @State private var showingAlert = false
     
     var body: some View {
         VStack {
-            FlatmateHeaderView(flatmate: flatmate)
+            FlatmateHeaderView(user: user)
             Divider()
             
             VStack(alignment: .leading) {
@@ -41,30 +42,39 @@ struct FlatmateDetailView: View {
 
 struct FlatmateDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        FlatmateDetailView(flatmate: Flatmate(name: "Christophe", imageName: "christophe", carrotNumber: 7, trophyNumber: 1))
+        FlatmateDetailView(user: .mock())
     }
 }
 
 struct FlatmateHeaderView: View {
-    @State var flatmate: Flatmate
+    
+    var user: User
     
     var body: some View {
         HStack {
-            Image(flatmate.imageName)
-                .resizable()
-                .frame(width: 150, height: 150)
+            if let image = user.image {
+                Image(image)
+                    .resizable()
+                    .frame(width: 150, height: 150)
+            }
             
             VStack(alignment: .leading, spacing: 12) {
-                Text(flatmate.name)
-                    .font(.title)
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 6)
-                Text("\(flatmate.carrotNumber) 🥕")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                Text("\(flatmate.trophyNumber) 🏆")
-                    .font(.title2)
-                    .fontWeight(.semibold)
+                if let username = user.username {
+                    Text(username)
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 6)
+                }
+                if let carrotWallet = user.carrotWallet {
+                    Text("\(carrotWallet) 🥕")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                }
+                if let trophy = user.trophy {
+                    Text("\(trophy) 🏆")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                }
             }
             .padding()
         }

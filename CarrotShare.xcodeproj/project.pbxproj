@@ -31,7 +31,7 @@
 		962F2BD329378C6A00524427 /* SignInFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BD229378C6A00524427 /* SignInFieldsView.swift */; };
 		962F2BD529378D0700524427 /* SignInWithAppleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BD429378D0700524427 /* SignInWithAppleButtonView.swift */; };
 		962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BDC2937957400524427 /* FlatmatesView.swift */; };
-		962F2BDF2937971D00524427 /* FlatmatesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BDE2937971D00524427 /* FlatmatesListView.swift */; };
+		962F2BDF2937971D00524427 /* FlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BDE2937971D00524427 /* FlatshareView.swift */; };
 		962F2BE12937997E00524427 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BE02937997E00524427 /* TabBarView.swift */; };
 		962F2BE6293799D300524427 /* LetsPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BE5293799D300524427 /* LetsPlayView.swift */; };
 		962F2BE8293799DC00524427 /* CarrotTradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F2BE7293799DC00524427 /* CarrotTradeView.swift */; };
@@ -68,6 +68,8 @@
 		F4C81D2F293DF6AE008638ED /* FlatshareFieldsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */; };
 		F4C81D31293DFC31008638ED /* CreateFlatshareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */; };
 		F4C81D35293E03CC008638ED /* JoinFlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */; };
+		F4C81D53294090D0008638ED /* FlateshareCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D52294090D0008638ED /* FlateshareCellView.swift */; };
+		F4C81D552940AAA6008638ED /* FlatshareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D542940AAA6008638ED /* FlatshareResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,7 +98,7 @@
 		962F2BD229378C6A00524427 /* SignInFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFieldsView.swift; sourceTree = "<group>"; };
 		962F2BD429378D0700524427 /* SignInWithAppleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButtonView.swift; sourceTree = "<group>"; };
 		962F2BDC2937957400524427 /* FlatmatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesView.swift; sourceTree = "<group>"; };
-		962F2BDE2937971D00524427 /* FlatmatesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatmatesListView.swift; sourceTree = "<group>"; };
+		962F2BDE2937971D00524427 /* FlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatshareView.swift; sourceTree = "<group>"; };
 		962F2BE02937997E00524427 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		962F2BE5293799D300524427 /* LetsPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsPlayView.swift; sourceTree = "<group>"; };
 		962F2BE7293799DC00524427 /* CarrotTradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTradeView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,8 @@
 		F4C81D2E293DF6AE008638ED /* FlatshareFieldsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatshareFieldsView.swift; sourceTree = "<group>"; };
 		F4C81D30293DFC31008638ED /* CreateFlatshareButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlatshareButtonView.swift; sourceTree = "<group>"; };
 		F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFlatshareView.swift; sourceTree = "<group>"; };
+		F4C81D52294090D0008638ED /* FlateshareCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlateshareCellView.swift; sourceTree = "<group>"; };
+		F4C81D542940AAA6008638ED /* FlatshareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatshareResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +200,7 @@
 				AC584AF7293A2CB20003A479 /* Rule.swift */,
 				F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */,
 				F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */,
+				F4C81D542940AAA6008638ED /* FlatshareResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,7 +300,6 @@
 			children = (
 				AC3FDCA12938A3D500F38D2A /* Components */,
 				962F2BDC2937957400524427 /* FlatmatesView.swift */,
-				962F2BDE2937971D00524427 /* FlatmatesListView.swift */,
 			);
 			path = Flatmates;
 			sourceTree = "<group>";
@@ -374,6 +378,7 @@
 		F4ACF0C3293B8349005E4636 /* Flatshare */ = {
 			isa = PBXGroup;
 			children = (
+				962F2BDE2937971D00524427 /* FlatshareView.swift */,
 				F4C81D33293E03B0008638ED /* Join Flateshare */,
 				F4C81D32293E03A4008638ED /* Create Flatshare */,
 			);
@@ -394,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */,
+				F4C81D52294090D0008638ED /* FlateshareCellView.swift */,
 			);
 			path = "Join Flateshare";
 			sourceTree = "<group>";
@@ -476,6 +482,8 @@
 				962F2C0129389C4300524427 /* MultiDatePickerGridView.swift in Sources */,
 				962F2BB029376B0E00524427 /* LoginTitleView.swift in Sources */,
 				962F2BCD29378A8500524427 /* SignInButtonView.swift in Sources */,
+				F4C81D552940AAA6008638ED /* FlatshareResponse.swift in Sources */,
+				F4C81D53294090D0008638ED /* FlateshareCellView.swift in Sources */,
 				962F2BA9293768D100524427 /* CarrotShareViewModel.swift in Sources */,
 				965468E729389E6300D6ADE8 /* SettingsButtonView.swift in Sources */,
 				962F2BF92937EFFB00524427 /* User.swift in Sources */,
@@ -517,7 +525,7 @@
 				962F2BCB293788ED00524427 /* SignUpFieldsView.swift in Sources */,
 				962F2BEA293799E800524427 /* ChoresView.swift in Sources */,
 				962F2BE8293799DC00524427 /* CarrotTradeView.swift in Sources */,
-				962F2BDF2937971D00524427 /* FlatmatesListView.swift in Sources */,
+				962F2BDF2937971D00524427 /* FlatshareView.swift in Sources */,
 				962F2BC52937848300524427 /* ViewExtension.swift in Sources */,
 				962F2BB82937705900524427 /* GoToSignInView.swift in Sources */,
 				962F2BB629376BBC00524427 /* AppButtonView.swift in Sources */,

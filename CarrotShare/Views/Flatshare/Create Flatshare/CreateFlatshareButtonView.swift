@@ -13,6 +13,7 @@ struct CreateFlatshareButtonView: View {
     @Binding var personCount: String
     @Binding var roomCount: String
     @Binding var code: String
+    @Binding var image: String
     @Binding var isShowingAlert: Bool
     
     var isAllFieldsFilled: Bool {
@@ -27,8 +28,11 @@ struct CreateFlatshareButtonView: View {
                     isShowingAlert.toggle()
                 }
             }
+            Task {
+                carrotShareVM.flatshare = try await carrotShareVM.createFlatshare(name: name, personCount: personCount, roomCount: roomCount, image: image, code: code)
+            }
         }) {
-            AppButtonView(text: "Create", color: .appGreen)
+            AppButtonView(text: "Create", color: .appOrange)
         }
         .alert("Incompleted Fields", isPresented: $isShowingAlert) {
             Button("OK", role: .cancel) { }
@@ -40,6 +44,6 @@ struct CreateFlatshareButtonView: View {
 
 struct CreateFlatshareButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateFlatshareButtonView(name: .constant(""), personCount: .constant(""), roomCount: .constant(""), code: .constant(""), isShowingAlert: .constant(false))
+        CreateFlatshareButtonView(name: .constant(""), personCount: .constant(""), roomCount: .constant(""), code: .constant(""), image: .constant(""), isShowingAlert: .constant(false))
     }
 }
