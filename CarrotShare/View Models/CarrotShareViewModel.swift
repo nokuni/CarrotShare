@@ -9,6 +9,12 @@ import SwiftUI
 
 class CarrotShareViewModel: ObservableObject {
     
+    init() {
+        Task {
+            try await getUsers()
+        }
+    }
+    
     @Published var isLoggedIn: Bool = false
     @Published var isApplyingSettings: Bool = false
     @Published var user: User?
@@ -19,6 +25,7 @@ class CarrotShareViewModel: ObservableObject {
     @Published var flatshare: Flatshare?
     @Published var flatshares: [Flatshare]?
     @Published var flatshareResponse: FlatshareResponse?
+    @Published var signInAlertError: SignInAlertError = .none
     
     let choreUrl = "http://localhost:8080/chores/index"
     let flatshareUrl = "http://localhost:8080/flatshares/index"
@@ -26,8 +33,8 @@ class CarrotShareViewModel: ObservableObject {
     let signInUrl = "http://localhost:8080/api/signin"
     let usersUrl = "http://localhost:8080/users/index"
     let currentUserUrl = "http://localhost:8080/users/"
+    let joinFlatshareUrl = "http://localhost:8080/user/"
     
-    @Published var signInAlertError: SignInAlertError = .none
     
     enum SignInAlertError: String {
         case none = "No Error"
@@ -74,11 +81,13 @@ class CarrotShareViewModel: ObservableObject {
         return result
     }
     
-    func getUsers() async throws -> [User] {
+    func getUsers() async throws {
         let apiManager = APIManager()
         let users = try await apiManager.getRequest(url: usersUrl, cachePolicy: .useProtocolCachePolicy, model: [User].self)
         
-        return users
+        DispatchQueue.main.async {
+            self.users = users
+        }
     }
     
     func createFlatshare(name: String, personCount: String, roomCount: String, image: String?, code: String) async throws -> Flatshare {
@@ -141,10 +150,12 @@ class CarrotShareViewModel: ObservableObject {
         return currentUser
     }
     
-    func joinFlatshare(index: Int, code: String) async throws -> FlatshareResponse{
+    func joinFlatshare(index: Int, code: String) async throws -> FlatshareResponse {
         let apiManager = APIManager()
+        let url = joinFlatshareUrl + "\(index)"
+        print(url)
         let join = try await apiManager.postRequest(
-            url: "joinFlatshareUrl\(index)",
+            url: url,
             cachePolicy: .useProtocolCachePolicy,
             model: FlatshareResponse.self,
             body:

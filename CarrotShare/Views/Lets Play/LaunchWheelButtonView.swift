@@ -19,7 +19,7 @@ struct LaunchWheelButtonView: View {
                 .foregroundColor(Color(UIColor.systemBackground))
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color.red.cornerRadius(8))
+                .background(Color.appOrange.cornerRadius(30))
         }
         .padding()
         .disabled(wheel.isRotating)

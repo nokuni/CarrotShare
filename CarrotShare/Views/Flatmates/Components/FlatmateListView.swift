@@ -9,36 +9,35 @@ import SwiftUI
 
 struct FlatmateListView: View {
     
-    @StateObject var carrotShareVM = CarrotShareViewModel()
+    @EnvironmentObject var carrotShareVM: CarrotShareViewModel
+    var filteredUsers: [User] {
+        carrotShareVM.users?.filter {
+            $0.id != carrotShareVM.user?.id
+        } ?? []
+    }
     
     var body: some View {
         ZStack {
-            if let users = carrotShareVM.users {
-                List(users) { user in
+            if let _ = carrotShareVM.users {
+                List(filteredUsers) { user in
                     NavigationLink(destination: FlatmateDetailView(user: user)) {
                         FlatmateView(user: user)
                     }
                 }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {
-                            // Do something...
-                        }, label: {
-                            if let image = carrotShareVM.user?.image {
-                                Image(image)
-                            }
-                        })
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(Color("AppGreen"))
-                    }
-                }
+
             }
         }
-        .task {
-            do {
-                carrotShareVM.users = try await carrotShareVM.getUsers()
-            } catch {
-                print(error)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                if let user = carrotShareVM.user {
+                    NavigationLink {
+                        FlatmateDetailView(user: user)
+                    } label: {
+                        Image(user.image ?? "")
+                    }
+                    .frame(width: 100, height: 100)
+                    .foregroundColor(Color("AppGreen"))
+                }
             }
         }
     }
@@ -46,7 +45,9 @@ struct FlatmateListView: View {
 
 struct FlatmateListView_Previews: PreviewProvider {
     static var previews: some View {
-        FlatmateListView()
-            .environmentObject(CarrotShareViewModel())
+        NavigationView {
+            FlatmateListView()
+                .environmentObject(CarrotShareViewModel())
+        }
     }
 }

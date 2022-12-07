@@ -15,8 +15,8 @@ struct User: Codable, Identifiable {
     var image: String?
     var carrotWallet: Int?
     var trophy: Int?
+    var flatshareId: Int = 1
     var chore: Chore = .choreMock()
-    var flatshares: [Flatshare] = []
     
     enum CodingKeys: String, CodingKey {
         case id, username, email, password, image, carrotWallet, trophy

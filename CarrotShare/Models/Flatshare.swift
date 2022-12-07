@@ -8,7 +8,7 @@
 import Foundation
 
 struct Flatshare: Codable, Identifiable {
-    var id: Int?
+    var id: Int
     var name: String?
     var personCount: String?
     var roomCount: String?
