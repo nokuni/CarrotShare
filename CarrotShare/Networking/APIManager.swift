@@ -60,6 +60,27 @@ class APIManager {
         print(result)
         return result
     }
+    
+    func putRequest<M: Codable>(url: String, cachePolicy: URLRequest.CachePolicy, model: M.Type, body: [String: Any]) async throws -> M {
+        guard let url = URL(string: url)
+        else {
+            throw APIError.badURL.rawValue
+        }
+        
+        var urlRequest = URLRequest(url: url, cachePolicy: cachePolicy)
+        urlRequest.httpMethod = "PUT"
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body)
+        let (data, _) = try await URLSession.shared.data(for: urlRequest)
+        
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        let result = try decoder.decode(M.self, from: data)
+        print(result)
+        return result
+    }
 }
 
 extension String: LocalizedError {

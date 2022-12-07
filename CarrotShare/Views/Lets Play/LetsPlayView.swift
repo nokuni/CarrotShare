@@ -3,14 +3,17 @@ import SwiftUI
 struct LetsPlayView: View {
     @State private var showingSheet = false
     //  var user: User
+    let uptade: Date = Date.now.addingTimeInterval(-86400)
+
     var body: some View {
         NavigationView{
             ScrollView {
                 
                 Button {
+                    
                     showingSheet.toggle()
                 } label: {
-                    
+                 
                     ZStack{
                         Rectangle()
                             .foregroundColor(.appOrange)
@@ -38,16 +41,16 @@ struct LetsPlayView: View {
                                     .padding(.trailing, 40.0)
                             }
                         }
-                        
                     }
-                } .sheet(isPresented: $showingSheet) {
-                    // Ajouter
-//                    ResultWheelView()
-
-                    WheelView(wheel: Wheel())
+                }.sheet(isPresented: $showingSheet) {
+                    if uptade == Date.now {
+                        ResultWheelView()
+                    } else {
+                            WheelView(wheel: Wheel())
+                        }
                 }
                 HStack {
-                    
+                  
                     Text("My Trophies")
                         .padding(15)
                         .font(.title3)

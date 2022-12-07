@@ -65,13 +65,18 @@ class CarrotShareViewModel: ObservableObject {
     }
     
     func getChore(from index: Int) -> Chore? {
-        if let choreIndex = chores.firstIndex(where: {_ in
-            return false
-            //            $0.day == index
+        if let choreIndex = chores.firstIndex(where: {
+                        $0.day == index
         }) {
             return chores[choreIndex]
         }
         return nil
+    }
+    
+    func getUserFromChore(chore: Chore) -> User? {
+        users?.first(where: {
+            $0.id == chore.userId
+        })
     }
     
     func getFlatshares() async throws -> [Flatshare] {

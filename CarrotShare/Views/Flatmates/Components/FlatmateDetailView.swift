@@ -23,6 +23,7 @@ struct FlatmateDetailView: View {
                     .fontWeight(.semibold)
                     .padding(40)
                 HStack {
+                    
                     Text("Hover and mop the bathroom")
                         .font(.title3)
                     Spacer()

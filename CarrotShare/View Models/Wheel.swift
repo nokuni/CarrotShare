@@ -21,6 +21,18 @@ class Wheel: ObservableObject {
     var nameWon: String = "Try Again"
     
     @Published var degree: Double = 0
+    let wheelUrl = "http://localhost:8080/wheel/isPlayed"
+    
+    func updateWeel() async throws {
+        let apiManager = APIManager()
+        _ = try await apiManager.putRequest(url: wheelUrl,
+                                            cachePolicy: .useProtocolCachePolicy,
+                                            model: WheelModel.self,
+                                            body: [
+                                                "updatedAt": Date()
+                                            ])
+    }
+    
     @Published var elements: [WheelElement] = [
         WheelElement(frame: (UIScreen.main.bounds.width * 0.40, UIScreen.main.bounds.height * 0.35, .topLeading), userImage: "joe"),
         WheelElement(frame: (UIScreen.main.bounds.width * 0.40, UIScreen.main.bounds.height * 0.35, .topTrailing), userImage: "nat"),
@@ -94,5 +106,13 @@ class Wheel: ObservableObject {
     
     func rotate() {
         withAnimation { degree += 55 }
+    }
+    
+    func formatStringDateShort(date: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        let newDate = dateFormatter.date(from: date)
+        dateFormatter.setLocalizedDateFormatFromTemplate("dd/MM/yyyy")
+        return dateFormatter.string(from: newDate ?? Date.now)
     }
 }

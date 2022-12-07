@@ -14,6 +14,7 @@ struct Chore: Identifiable, Codable {
     var isDone: Bool
     let day: Int?
     var carrotAmount: Int
+    var userId: Int
     
     enum Category: String, Codable {
         case cleanBathRoom, dishes, cleanKitchen, takeOutRubbish, cleanLivingRoom, foodShopping, cleanToilet
@@ -41,7 +42,7 @@ struct Chore: Identifiable, Codable {
 
 extension Chore {
     static func choreMock() -> Chore {
-        Chore(id: 0, content: "Nettoyer la salle de bain", category: .cleanBathRoom, isDone: false, day: 1, carrotAmount: 2)
+        Chore(id: 0, content: "Nettoyer la salle de bain", category: .cleanBathRoom, isDone: false, day: 1, carrotAmount: 2, userId: 1)
     }
 }
 

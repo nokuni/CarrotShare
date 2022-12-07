@@ -70,6 +70,7 @@
 		F4C81D35293E03CC008638ED /* JoinFlatshareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */; };
 		F4C81D53294090D0008638ED /* FlateshareCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D52294090D0008638ED /* FlateshareCellView.swift */; };
 		F4C81D552940AAA6008638ED /* FlatshareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D542940AAA6008638ED /* FlatshareResponse.swift */; };
+		F4C81D572940EC27008638ED /* WheelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D562940EC27008638ED /* WheelModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -137,6 +138,7 @@
 		F4C81D34293E03CC008638ED /* JoinFlatshareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinFlatshareView.swift; sourceTree = "<group>"; };
 		F4C81D52294090D0008638ED /* FlateshareCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlateshareCellView.swift; sourceTree = "<group>"; };
 		F4C81D542940AAA6008638ED /* FlatshareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatshareResponse.swift; sourceTree = "<group>"; };
+		F4C81D562940EC27008638ED /* WheelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				F4ACF0BE293A3CA5005E4636 /* Flatshare.swift */,
 				F4ACF0C0293A3CCF005E4636 /* SignInResponse.swift */,
 				F4C81D542940AAA6008638ED /* FlatshareResponse.swift */,
+				F4C81D562940EC27008638ED /* WheelModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				F4ACF0BF293A3CA5005E4636 /* Flatshare.swift in Sources */,
 				962F2BB229376B4700524427 /* LoginImageView.swift in Sources */,
 				962F2BBA2937706300524427 /* GoToSignUpView.swift in Sources */,
+				F4C81D572940EC27008638ED /* WheelModel.swift in Sources */,
 				962F2BDD2937957400524427 /* FlatmatesView.swift in Sources */,
 				962F2BFD29389BF100524427 /* DaysListView.swift in Sources */,
 				AC584AF8293A2CB20003A479 /* Rule.swift in Sources */,

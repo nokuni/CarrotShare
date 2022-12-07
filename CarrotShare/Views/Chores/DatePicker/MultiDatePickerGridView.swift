@@ -14,8 +14,11 @@ struct MultiDatePickerGridView: View {
     var body: some View {
         LazyVGrid(columns: grid, spacing: 25) {
             ForEach(1..<days, id: \.self) { index in
-                if let chore = carrotShareVM.getChore(from: index) {
-                    NavigationLink(destination: Text("\(chore.content)")) {
+                if let chore = carrotShareVM.getChore(from: index),
+                   let user = carrotShareVM.getUserFromChore(chore: chore) {
+                    NavigationLink(destination:
+                                    FlatmateDetailView(user: user)
+                    ) {
                         DateNumberElementView(index: index)
                     }
                 } else {
