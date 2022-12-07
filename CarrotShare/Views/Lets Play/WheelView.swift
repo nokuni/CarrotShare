@@ -12,7 +12,6 @@ struct WheelView: View {
     @ObservedObject var wheel: Wheel
     var body: some View {
         ZStack{
-         
                 Color.appGreen.edgesIgnoringSafeArea(.all)
             VStack {
                 Button("Retour") {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ResultWheelView: View {
     @Environment(\.dismiss) var dismiss
+    var username: String
     
     var body: some View {
         ZStack{
@@ -48,7 +49,8 @@ struct ResultWheelView: View {
                             .frame(maxHeight: UIScreen.main.bounds.width * 0)
                         }
                     // Mettre ici le resultat de la roue
-                    Text("Nathalie")
+                    
+                    Text(username)
                         .font(.largeTitle)
                 }
                 Text("Tired of chores !")
@@ -106,7 +108,7 @@ struct ResultWheelView: View {
 }
     struct ResultWheelView_Previews: PreviewProvider {
         static var previews: some View {
-            ResultWheelView()
+            ResultWheelView(username: "TEST")
         }
     }
 

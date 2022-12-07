@@ -11,6 +11,7 @@ struct LaunchWheelButtonView: View {
     @ObservedObject var wheel: Wheel
     var body: some View {
         Button(action: {
+            
             wheel.start()
         }) {
             Text("Launch the wheel !")

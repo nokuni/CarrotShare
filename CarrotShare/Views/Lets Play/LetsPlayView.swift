@@ -1,19 +1,26 @@
 import SwiftUI
 
 struct LetsPlayView: View {
+    @StateObject var wheel = Wheel()
+    @EnvironmentObject var carrotShareVM: CarrotShareViewModel
+    
     @State private var showingSheet = false
     //  var user: User
     let uptade: Date = Date.now.addingTimeInterval(-86400)
-
+    
     var body: some View {
         NavigationView{
             ScrollView {
                 
                 Button {
-                    
-                    showingSheet.toggle()
+//                    if let wheelModel = wheel.wheelModel {
+//                        let wheelDate = wheel.formatStringDateShort(date: wheelModel.updatedAt)
+//                        if !Date.isToday(towardsTo: wheelDate) {
+                            showingSheet.toggle()
+//                        }
+//                    }
                 } label: {
-                 
+                    
                     ZStack{
                         Rectangle()
                             .foregroundColor(.appOrange)
@@ -43,14 +50,10 @@ struct LetsPlayView: View {
                         }
                     }
                 }.sheet(isPresented: $showingSheet) {
-                    if uptade == Date.now {
-                        ResultWheelView()
-                    } else {
-                            WheelView(wheel: Wheel())
-                        }
+                    WheelLaunchView(wheel: wheel)
                 }
                 HStack {
-                  
+                    
                     Text("My Trophies")
                         .padding(15)
                         .font(.title3)
@@ -145,14 +148,14 @@ struct LetsPlayView: View {
                         }.padding(30)
                     }
                 }
-            HStack{
-                Text("Roomate Ranking")
-                    .padding(15)
-                    .font(.title3)
-                Spacer()
-            }
-            HStack{
-                Image("yannc")
+                HStack{
+                    Text("Roomate Ranking")
+                        .padding(15)
+                        .font(.title3)
+                    Spacer()
+                }
+                HStack{
+                    Image("yannc")
                     
                     Image("nat")
                         .padding([.leading, .bottom, .trailing], 28 )
@@ -164,6 +167,20 @@ struct LetsPlayView: View {
                     .frame(width: 300)
                     .padding(.top, -40)
             }
+            .onAppear{
+                print(carrotShareVM.user)
+            }
+            .task {
+                do {
+                    if let user = carrotShareVM.user {
+                        wheel.wheelModel = try await wheel.getWheel(from: user.flatshareId)
+                        print(user.flatshareId)
+                    }
+                } catch {
+                    print(error)
+                }
+            }
+            
         }
     }
 }
@@ -171,5 +188,6 @@ struct LetsPlayView: View {
 struct LetsPlayView_Previews: PreviewProvider {
     static var previews: some View {
         LetsPlayView()
+            .environmentObject(CarrotShareViewModel())
     }
 }

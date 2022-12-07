@@ -8,5 +8,14 @@
 import Foundation
 
 struct WheelModel: Codable {
-    var updatedAt: Date
+    var flatshareId: Int
+    var updatedAt: String
+}
+
+extension Date {
+    static func isToday(towardsTo date: Date) -> Bool {
+        let calendar = Calendar.current
+        
+        return calendar.isDateInToday(date)
+    }
 }

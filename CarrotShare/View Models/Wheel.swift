@@ -9,7 +9,10 @@ import SwiftUI
 
 class Wheel: ObservableObject {
     
+    @Published var wheelModel: WheelModel?
     static let shared = Wheel()
+    let apiManager = APIManager()
+    @Published var winner: String?
     
     struct WheelElement: Identifiable {
         var id = UUID()
@@ -21,16 +24,23 @@ class Wheel: ObservableObject {
     var nameWon: String = "Try Again"
     
     @Published var degree: Double = 0
-    let wheelUrl = "http://localhost:8080/wheel/isPlayed"
+    let updateWheelUrl = "http://localhost:8080/wheel/isPlayed"
+    let getWheelUrl = "http://localhost:8080/wheel/"
     
     func updateWeel() async throws {
         let apiManager = APIManager()
-        _ = try await apiManager.putRequest(url: wheelUrl,
+        _ = try await apiManager.putRequest(url: updateWheelUrl,
                                             cachePolicy: .useProtocolCachePolicy,
                                             model: WheelModel.self,
                                             body: [
                                                 "updatedAt": Date()
                                             ])
+    }
+    
+    func getWheel(from id: Int) async throws -> WheelModel {
+        let wheel = try await apiManager.getRequest(url: getWheelUrl + "\(id)" , cachePolicy: .useProtocolCachePolicy, model: WheelModel.self)
+        
+        return wheel
     }
     
     @Published var elements: [WheelElement] = [
@@ -69,6 +79,7 @@ class Wheel: ObservableObject {
             return "Nathalie"
             
         default:
+            print("default case")
             return "Try again"
         }
     }
@@ -77,6 +88,7 @@ class Wheel: ObservableObject {
     
     func start() {
         nameWon = chefName
+        print(chefName)
         isRotating = true
         timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
             self.countDown(timer: timer, durationCount: self.duration)
@@ -98,7 +110,8 @@ class Wheel: ObservableObject {
             if isCountDownCompleted {
                 isRotating = false
                 cancelTimer(timer)
-                print(nameWon)
+                winner = nameWon
+                print(winner)
                 actionAfter?()
             }
         }
@@ -108,11 +121,11 @@ class Wheel: ObservableObject {
         withAnimation { degree += 55 }
     }
     
-    func formatStringDateShort(date: String) -> String {
+    func formatStringDateShort(date: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         let newDate = dateFormatter.date(from: date)
         dateFormatter.setLocalizedDateFormatFromTemplate("dd/MM/yyyy")
-        return dateFormatter.string(from: newDate ?? Date.now)
+        return newDate ?? Date.now
     }
 }

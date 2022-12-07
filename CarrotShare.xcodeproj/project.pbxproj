@@ -71,6 +71,7 @@
 		F4C81D53294090D0008638ED /* FlateshareCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D52294090D0008638ED /* FlateshareCellView.swift */; };
 		F4C81D552940AAA6008638ED /* FlatshareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D542940AAA6008638ED /* FlatshareResponse.swift */; };
 		F4C81D572940EC27008638ED /* WheelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D562940EC27008638ED /* WheelModel.swift */; };
+		F4C81D59294142A0008638ED /* WheelLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C81D58294142A0008638ED /* WheelLaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,7 @@
 		F4C81D52294090D0008638ED /* FlateshareCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlateshareCellView.swift; sourceTree = "<group>"; };
 		F4C81D542940AAA6008638ED /* FlatshareResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatshareResponse.swift; sourceTree = "<group>"; };
 		F4C81D562940EC27008638ED /* WheelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelModel.swift; sourceTree = "<group>"; };
+		F4C81D58294142A0008638ED /* WheelLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelLaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +338,7 @@
 				A25DB04F293F3E7F00156B57 /* WheelBoardView.swift */,
 				A25DB051293F3E9300156B57 /* WheelBackgroundView.swift */,
 				A25DB053293F3EAA00156B57 /* LaunchWheelButtonView.swift */,
+				F4C81D58294142A0008638ED /* WheelLaunchView.swift */,
 			);
 			path = "Lets Play";
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				F4ACF0C1293A3CCF005E4636 /* SignInResponse.swift in Sources */,
 				962F2BF52937DCF700524427 /* CustomMultiDatePickerView.swift in Sources */,
 				962F2B94293761D100524427 /* CarrotShareApp.swift in Sources */,
+				F4C81D59294142A0008638ED /* WheelLaunchView.swift in Sources */,
 				962F2BA7293768B300524427 /* LoginView.swift in Sources */,
 				ACFDC4FD2938FA8A008F8AF7 /* CarrotTradeRulesView.swift in Sources */,
 				962F2BBE2937738100524427 /* SignUpView.swift in Sources */,
