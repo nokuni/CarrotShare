@@ -11,40 +11,63 @@ struct CarrotTradeView: View {
     @State private var showingSheet = false
     @State private var showingTrade = false
     @State private var selectedRule: Rule?
-   
+    private let userImages = ["joe", "nat", "yannc", "christophe"]
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack {
-                    HStack {
-                        Image("banner")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
+            ZStack {
+                VStack(alignment: .leading, spacing: 0) {
+                    ScrollView {
+                        LinearGradient(colors: [.appOrange, .appGreen], startPoint: .bottom, endPoint: .top)
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.7)
+                            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.3, alignment: .bottom)
+                            .overlay(
+                                GeometryReader { geo in
+                                    VStack {
+                                        Text("Carrot Trade")
+                                            .fontWeight(.bold)
+                                            .font(.system(size: UIScreen.main.bounds.height * 0.06))
+                                            .foregroundColor(Color(UIColor.systemBackground))
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                        
+                                        HStack {
+                                            ForEach(userImages, id: \.self) { image in
+                                                Image(image)
+                                                    .resizable()
+                                                    .scaledToFit()
+                                            }
+                                        }
+                                    }
+                                    .padding(.top, 50)
+                                    .padding(.horizontal)
+                                }
+                            )
+                        ZStack {
+                            Color.white
+                            VStack {
+                                ForEach(Rule.rules, id: \.id) { rule in
+                                    TradeView(rule: rule, selectedRule: $selectedRule, showingTrade: $showingTrade)
+                                }
+                                
+                                Button("Want to know more about carrot trade?") {
+                                    showingSheet.toggle()
+                                }
+                                .padding(.bottom)
+                                .foregroundColor(.accentColor)
+                                .sheet(isPresented: $showingSheet) {
+                                    RulesView()
+                                }
+                                .sheet(isPresented: $showingTrade) {
+                                    ChooseRewardView(selectedRule: $selectedRule, showingSheet: $showingTrade)
+                                }
+                            }
+                        }
                     }
                     .ignoresSafeArea()
-                    
-                    ForEach(Rule.rules, id: \.id) { rule in
-                        TradeView(rule: rule, selectedRule: $selectedRule, showingTrade: $showingTrade)
-                    }
-                    
-                    Button("Want to know more about carrot trade?") {
-                        showingSheet.toggle()
-                    }
-                    .padding(.bottom)
-                    .foregroundColor(.accentColor)
-                    .sheet(isPresented: $showingSheet) {
-                        RulesView()
-                    }
-                    .sheet(isPresented: $showingTrade) {
-                        ChooseRewardView(selectedRule: $selectedRule, showingSheet: $showingTrade)
-                    }
                 }
             }
-            .navigationBarTitle("Carrot trade")
         }
     }
 }
-
 struct CarrotTradeView_Previews: PreviewProvider {
     static var previews: some View {
         CarrotTradeView()

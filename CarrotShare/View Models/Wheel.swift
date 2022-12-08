@@ -110,7 +110,9 @@ class Wheel: ObservableObject {
             if isCountDownCompleted {
                 isRotating = false
                 cancelTimer(timer)
-                winner = nameWon
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    self.winner = self.nameWon
+                }
                 print(winner)
                 actionAfter?()
             }
